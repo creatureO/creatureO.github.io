@@ -1,0 +1,38 @@
+/*test file for css*/
+
+
+*{
+    font-family:'Courier New', Courier, monospace, sans-serif;
+    color: rgb(0,255,0);                        /* Changes text color */
+}
+
+a {/* Changes text color */
+  color:rgb(0,255,0);                        /* Changes text color */
+  text-decoration-line: underline;       /* Ensures the line is visible */
+  text-decoration-color: #0000;       /* Changes underline color independently */
+  text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    margin:0px;
+    overflow-x:hidden;
+    background-color: white;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+ul{
+    display:flex;
+}
+
+
+li{
+    display:flex;
+}
+
