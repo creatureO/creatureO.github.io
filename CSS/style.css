@@ -39,11 +39,9 @@ header{
     position:sticky;
     top:0;
     height:fit-content;
-    max-width:100vw;
+    width:100vw;
     display:block;
     align-items: center;
-    overflow-x: hidden;
-
     background-image: url('../creatureO-Images/homepage\ items/Textures/RustyMetal.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -275,19 +273,19 @@ header{
     max-width:100vw;
     display:block;
     align-items: center;
-    overflow-x: hidden;
-
     background-image: url('../creatureO-Images/homepage\ items/Textures/RustyMetal.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover; /* Optional: keeps it full screen */
+
+    border-bottom:solid 5px grey;
 }
 
 
 header h1{
     margin:0px;
-    padding:10px 50px;
-    font-size:0.75em;
+    padding:0.5vh 3vh;
+    font-size:1em;
     font-weight: 900;
     background: radial-gradient(green,black);
     border:solid 1px rgb(200, 200, 200);
@@ -296,11 +294,11 @@ header h1{
 }
 
 header svg{
-    height:2.5rem;
+    height:1.5rem;
 }
 
 header svg rect{
-height:1vw;
+height:0.5rem;
 }
 
 .anchorTitle{
@@ -309,20 +307,24 @@ height:1vw;
     align-items: center;
     padding-left: 3vw;
     padding-right: 3vw;
-    padding-top:0.5rem;
-    padding-bottom:0rem;
+    padding-top:0.5vh;
+    padding-bottom:1vh;
 }
 
 .anchorbar{
     padding:0.5rem 3vw;
-    overflow-x: auto;
+    max-width: fit-content;
+    border:solid 1px rgb(200, 200, 200);
+    outline:solid 5px rgb(60, 60, 60);
+    background: radial-gradient(grey);
 }
 
 .anchorbar ul{
     list-style:none;
     display:flex;
     column-gap: 20px;
-    padding:0px;
+    overflow-x: auto;
+    padding:5px;
     margin:0px;
 }
 
@@ -334,6 +336,7 @@ height:1vw;
     padding:0px;
     margin:0px;
 }
+
 
 .anchorbar li a{
     color:black;
@@ -355,7 +358,7 @@ height:1vw;
     .mainLogo{
         border:none;
         outline:none;
-        max-height:50px; 
+        max-height:2rem; 
         height:auto;
     }
     
