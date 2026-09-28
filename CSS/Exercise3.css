@@ -177,9 +177,12 @@ transition: background-color 0.5s ease, border-radius 0.3s ease, max-width 0.5s 
 @media (max-width: 900px) {
 
     .articleTitle{
-        padding:0vw;
+        padding: 10vw 0vw;
         display:flex;
         justify-content: center;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.5em;
     }
 
     .anchorbar h3{
