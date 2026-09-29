@@ -176,6 +176,15 @@ transition: background-color 0.5s ease, border-radius 0.3s ease, max-width 0.5s 
 
 @media (max-width: 900px) {
 
+    header{
+        margin:0px;
+        background: rgb(158, 205, 158);
+        position:sticky;
+        top:0;
+        z-index: 100;
+        overflow-x: hidden;
+    }
+
     .articleTitle{
         padding: 10vw 0vw;
         display:flex;
@@ -184,16 +193,32 @@ transition: background-color 0.5s ease, border-radius 0.3s ease, max-width 0.5s 
         text-decoration-thickness: 1px;
         text-underline-offset: 0.5em;
     }
-
-    .anchorbar h3{
-        font-size:0.75em;
-        white-space:nowrap;
+    
+    .anchorbar{
+    margin:0px;
+    padding:0px;
+    border-bottom:1px solid black;
+    background-color: white;
+    overflow-x: scroll;
+    }
+    
+    .anchorbar ul{
+        display:flex;
+        justify-content: start;
+        padding:0px 20px;
+        margin:0px;
     }
 
     .anchorbar li a{
         display:flex;
         margin:0px;
         padding:2vh 1.5em;
+    }
+
+
+    .anchorbar h3{
+        font-size:0.75em;
+        white-space:nowrap;
     }
 
 
