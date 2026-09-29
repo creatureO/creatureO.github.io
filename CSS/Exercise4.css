@@ -1,3 +1,6 @@
+/*test file for css*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *{
     font-family:'Courier New', Courier, monospace, sans-serif;
     color: rgb(0,255,0);                        /* Changes text color */
@@ -120,41 +123,6 @@ main{
     overflow-x: hidden;
 }
 
-.subpageWrapper{
-    display:block;
-}
-
-.subpageWrapper ul{
-    padding:0px;
-}
-
-.subpageWrapper li a{
-    border:solid 1px rgb(0,255,0);
-    padding:10px 20px;
-    font-weight: 100;
-}
-
-.subpageWrapper li a:hover{
-    color:black;
-    background-color: yellowgreen;
-    font-weight: bolder;
-}
-
-.sub-pages ul{
-    list-style:none;
-    display:flex;
-    column-gap: 0px;
-    padding:0px;
-    margin:0px;
-    font-weight: 100;
-}
-
-.sub-pages li h3{
-    padding:10px 0px;
-    margin:0px;
-    font-weight: 100;
-}
-
 
 /* =================================== Images SECTION ===================================================== */
 
@@ -180,34 +148,6 @@ main p{
 display:block;
 }
 
-.paragraphFlexer{
-    display:flex;
-    flex-wrap: wrap;
-    /*justify-self: center;*/
-    column-gap:50px;
-}
-
-.paragraphs{
-    border:none;
-}
-
-.paragraphChunk1{
-    max-width: 500px;
-    line-height:1.5em;
-    white-space:wrap;
-}
-
-.paragraphChunk1-2{
-    max-width: 450px;
-    line-height:1.5em;
-    font-weight: bold;
-    white-space:wrap;
-    
-    border:solid 1px rgb(0,255,0);
-    padding:20px; 
-    background: radial-gradient(rgb(0, 80, 0),black);
-}
-
 .highlight{
 background-color:rgba(172, 255, 47, 0.25);
 padding:0.1em 0.5em;
@@ -231,6 +171,103 @@ cursor: pointer; /* Changes the cursor to a clicking hand */
 text-decoration: none;
 font-weight:bold;
 }
+
+hr{
+    border: none;            /* Removes default 3D shading/borders */
+    height:1px;
+    background-color:rgb(0,255,0);
+    overflow-x: hidden; 
+    margin:0vw;
+}
+
+/* =================================== IMAGES & SVG  SECTION ===================================================== */
+section{
+display:flex;
+width:stretch;
+height:fit-content;
+}
+
+.parent{
+    border: 1px solid rgb(0,255,0);
+    background: white;
+    height:50vw;
+    width:30vw;
+    padding:20px;
+
+/*animated gradient component*/
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #edd043, #650000);
+background-size: 400% 400%;
+animation: gradientShift 10s ease infinite;
+}
+
+/* 4. Define the movement coordinates */
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.parent::before{
+    display:flex;
+    justify-content: center;
+    color:black;
+    font-weight: bold;
+    content: "J is the new black!";
+}
+
+.parent-Caption{
+    display:inline-block;
+    max-width: 400px;
+    padding:20px;
+    margin:20px;
+    border-left: 1px solid rgb(0,255,0);
+}
+
+figure{
+    width: 100%;
+    height: 5%;
+    overflow: hidden;
+    background-color: rgb(30, 143, 255);
+    border: 10px double rgb(0,255,0);
+    outline: 3px solid rgb(0,255,0);
+    aspect-ratio: 1 / 1; /* Makes the height always match the shrinking width */
+    margin:0px; /* VERY imporatnt to avoid default spacing */
+    transition: background-color 0.5s ease, height 0.5s ease;
+}
+
+figure:hover{
+    background-color: rgba(30, 143, 255, 0);
+    height: 100%;
+}
+
+figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    padding:50vw;
+    margin:-50vw;
+}
+
+figure img:hover{
+    animation: rotation 1s ease infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
 
 /* =================================== FOOTER SECTION ===================================================== */
 footer{
@@ -277,7 +314,7 @@ header{
     background-image: url('../creatureO-Images/homepage\ items/Textures/RustyMetal.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100vw; /* Optional: keeps it full screen */
+    background-size: cover; /* Optional: keeps it full screen */
 
     border-bottom:solid 5px grey;
 }
@@ -373,31 +410,6 @@ main h1{
     margin-left:0vw;
 }
 
-.paragraphFlexer{
-    display:block;
-    padding: 0vw 5vw;
-}
-
-.paragraphs{
-    border:none;
-}
-
-.paragraphChunk1{
-    max-width: 75vw;
-    line-height:1.5em;
-    white-space:wrap;
-}
-
-.paragraphChunk1-2{
-    max-width: 90vw;
-    line-height:1.5em;
-    font-weight: bold;
-    white-space:wrap;
-    
-    border:solid 1px rgb(0,255,0);
-    padding:20px; 
-    background: radial-gradient(rgb(0, 80, 0),black);
-}
 
 
 

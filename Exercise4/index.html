@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="icon" type="image/png" href="../creatureO-Images/homepage items/creatureOavatar.png">
+  <title>CreatureO Exercise 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/Exercise4.css">
+  <script src="../JS/main.js" defer></script>
+</head>
+
+
+<body>
+<header>
+<div class="anchorTitle">
+<div style="display:flex; align-items:center; flex-wrap:nowrap; gap:1vw;">
+    <a href="../"><img class="mainLogo" src="../creatureO-Images/homepage items/creatureOavatar.png"/></a>
+    <h1>creatureO</h1>
+</div>
+<div style="pointer-events: stroke;">
+    <svg viewBox="0 0 100 80" width="80" fill="black">
+        <rect y="10" width="400" height="12" rx="0"></rect>
+        <rect y="35" width="400" height="12" rx="0"></rect>
+        <rect y="60" width="400" height="12" rx="0"></rect>
+    </svg>
+</div>
+</div>
+<div class="anchorbar">
+    <ul>
+    <li> <h3><a href="../">Home</a></h3> </li>
+    <li> <h3><a href="../Exercise1/">Exercise_1</a></h3> </li>
+    <li> <h3><a href="../Exercise2/">Exercise_2</a></h3> </li>
+    <li> <h3><a href="../Exercise3/">Exercise_3</a></h3> </li>
+    <li> <h3><a href="../Exercise4/">Exercise_4</a></h3> </li>
+    </ul> 
+</div>
+</header>
+
+<main>
+    <div class="phoneNavBar"></div>
+    <h2 style="font-size:xx-large">Exercise 4!</h2>
+    <hr><!--BAR OF SEPARATION-->
+    <p>For this exercise i am making a letter J in 5 distinct ways using CSS and html!</p>
+
+<!--STYLE YOUR BLOCK SHIT HERE!-->
+<style>
+/* SAMPLE 1 */
+    .block1{
+    background:dodgerblue; height:5vw; width:30vw; position: relative;
+    animation-duration: 2s;
+    margin-left: 0vw;
+    padding-left: 0vw;
+    }
+
+    .block2{
+        background:dodgerblue; height:stretch; width:5vw;
+    }
+    .block3{
+        background:dodgerblue; height:5vw; width:50%;
+    }
+
+    .blockRange{ /*space-between flexer*/
+        display:flex; justify-content: space-between; align-items: flex-end;  height:20vw;
+    }
+
+    .blockRange2{ /*space-between flexer*/
+        display:flex; justify-content: space-between; align-items: flex-end;  height:fit-content;
+    }
+
+    .block1, .block2, .block3{
+        border-radius: 0px; 
+        transition:border-radius 0.5s ease, width 0.5s ease, transform 0.5s ease, margin-left 0.5s ease, margin-right 0.5s ease, padding-left 0.5s ease, padding-right 0.5s ease;
+    }    
+    .block1:hover, .block2:hover, .block3:hover{
+        border-radius: 100px;  width:50%;
+        transition-delay: 0s; 
+        margin-left: 10vw;
+        padding-left: 10vw;
+    }
+    .block1:hover{
+        width:5vw;
+    }
+/* SAMPLE 2 */
+    .bubblepiece1{
+        position:absolute; top: 5vw; right:5vw; background:radial-gradient(dodgerblue, royalblue); height:5vw; width:5vw; border-radius:50vw; z-index: 3;
+    }
+
+    .bubblepiece2{
+        position:absolute; top: 10vw; right:5vw; background:radial-gradient(dodgerblue, royalblue);  height:15vw; width:5vw; border-radius:50vw; z-index: 2;
+    }
+
+    .bubblepiece3{
+        position:absolute; top: 22vw; right:5vw; background:linear-gradient(dodgerblue, royalblue); height:8vw; width:12vw; border-bottom-right-radius:50vw; border-bottom-left-radius:50vw; border-top-left-radius:5vw; z-index: 1;
+    }
+
+    .bubblepiece1, .bubblepiece2, .bubblepiece3{
+        scale:1;
+        margin:0vw;
+        transform-origin: left;
+        transform: translateY(0vw);
+        transition: scale 0.5s ease, margin 0.5s ease, transform 0.3s ease;
+    }
+    .bubblepiece1:hover, .bubblepiece2:hover, .bubblepiece3:hover{
+        scale:1.5;
+        margin:5vw;
+        transform: translateY(-2.5vw);
+    }
+
+/* SAMPLE 3 */
+    .blockRangeGrid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr); 
+        grid-auto-rows: auto; 
+          gap: 0px;     
+    }
+    .gridPixel{
+        background:dodgerblue; height:6vw; width:stretch;
+    }
+    .gridPixel2{
+        background:royalblue; height:6vw; width:stretch;
+    }
+    .gridPixel, .gridPixel2{
+        border-radius:0vw;
+        scale:1;
+        transition: border-radius 0.3s ease, scale 0.3s ease;
+    }
+    .gridPixel:hover, .gridPixel2:hover{
+        border-radius:10vw;
+        scale:1.5;
+        background:royalblue;
+        z-index: 50;
+    }
+/* LAST SAMPLE */
+    .lastLetter{
+        border-top: 10px solid dodgerblue ; 
+        border-right: 30px solid dodgerblue; 
+        width: 80%; height:40%; margin:0vw 20px;
+    }
+    .lastLetterNum2{
+        border-bottom: 30px solid dodgerblue ; 
+        border-right: 30px solid dodgerblue;  
+        border-left: 10px solid dodgerblue;  
+        width: 80%; height:40%; margin:0vw 10px;
+        border-bottom-right-radius: 50vw;
+        border-bottom-left-radius: 50vw;
+    }
+</style>
+<!--STYLE YOUR BLOCK SHIT HERE!-->
+
+<section> <!-- this is the parent of the letters 1 -->
+    <div class="parent">
+        <br><br>
+        <div class="block1"></div>
+        <div class="blockRange">
+            <div class="block2" style="height:5vw;"></div>
+            <div class="block2"></div>
+            <br>
+        </div>
+        <div class="blockRange2">
+            <div class="block3"></div>
+            <br>
+        </div>
+    </div> 
+<p class="parent-Caption">1</p>
+</section>
+<br> <hr><!--BAR OF SEPARATION--> <br>
+
+<section> <!-- this is the parent of the letters 2 -->
+    <div class="parent">
+        <div class="blockRange" style="position:relative; justify-content:end; height:stretch;">
+            <div class="bubblepiece1"></div>
+            <div class="bubblepiece2"></div>
+            <div class="bubblepiece3"></div>
+        </div>
+    </div> 
+    <p class="parent-Caption">2</p>
+</section>
+<br> <hr><!--BAR OF SEPARATION--> <br>
+
+<section> <!-- this is the parent of the letters 3 -->
+    <div class="parent">
+        <br>
+        <div class="blockRangeGrid">
+            <div class="gridPixel"></div> <div class="gridPixel2"></div> <div class="gridPixel2"></div> <div class="gridPixel2"></div> <div class="gridPixel2"></div> <div class="gridPixel"></div>
+            <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel2"></div> <div class="gridPixel"></div> <div class="gridPixel"></div>
+            <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel2"></div> <div class="gridPixel"></div> <div class="gridPixel"></div>
+            <div class="gridPixel"></div> <div class="gridPixel2"></div> <div class="gridPixel"></div> <div class="gridPixel2"></div> <div class="gridPixel"></div> <div class="gridPixel"></div>
+            <div class="gridPixel"></div> <div class="gridPixel2"></div> <div class="gridPixel2"></div> <div class="gridPixel2"></div> <div class="gridPixel"></div> <div class="gridPixel"></div>
+            <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel"></div> <div class="gridPixel"></div>
+        </div>
+    </div> 
+<p class="parent-Caption">3</p>
+</section>
+<br> <hr><!--BAR OF SEPARATION--> <br>
+
+<section> <!-- this is the parent of the letters 4 -->
+    <div class="parent">
+<figure>
+    <img src="../creatureO-Images/homepage items/Jpiece.webp" style="border:none; outline:none;">
+</figure>
+    </div> 
+<p class="parent-Caption">4</p>
+</section>
+<br> <hr><!--BAR OF SEPARATION--> <br>
+
+<section> <!-- this is the parent of the letters 5 -->
+    <div class="parent">
+        <div class="lastLetter"></div>
+        <div class="lastLetterNum2"></div>
+    </div> 
+<p class="parent-Caption">5</p>
+</section>
+
+
+    
+
+</main>
+<br><br><br><br>
+<footer>
+
+</footer>
+</body>
+
+</html>
