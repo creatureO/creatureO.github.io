@@ -44,9 +44,8 @@ header{
     align-items: center;
     background-image: url('../creatureO-Images/homepage\ items/Textures/RustyMetal.jpg');
     background-attachment: fixed;
-    background-position: fixed;
     background-repeat: no-repeat;
-    background-size: 100vw; /* Optional: keeps it full screen */
+    background-size:cover; /* Optional: keeps it full screen */
     z-index: 999;
 }
 
@@ -277,9 +276,8 @@ header{
     align-items: center;
     background-image: url('../creatureO-Images/homepage\ items/Textures/RustyMetal.jpg');
     background-attachment: fixed;
-    background-position: fixed;
     background-repeat: no-repeat;
-    background-size: 100vw; /* Optional: keeps it full screen */
+    background-size: cover; /* Optional: keeps it full screen */
 
     border-bottom:solid 5px grey;
 }
