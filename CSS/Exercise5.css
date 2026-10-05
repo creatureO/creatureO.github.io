@@ -1,0 +1,278 @@
+/*test file for css*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ========================================================================================= New FONTS ============================================================================== */
+
+*{
+    font-family:'Rubik', sans-serif;
+    color: black;                        /* Changes text color */
+}
+
+a {/* Changes text color */
+  color: currentColor;                        /* Changes text color */
+  text-decoration-line: underline;       /* Ensures the line is visible */
+  text-decoration-color: #0000;       /* Changes underline color independently */
+  text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    margin:0px;
+    overflow-x:hidden;
+    background-color: white;
+}
+
+.articleTitle /* h1 */{
+    color:rgb(255, 0, 81);
+    margin:0vw;
+    padding:2vw 5vw;
+    display:flex;
+    align-items: flex-end; /* Pushes all items to the bottom */
+    justify-content: end;
+}
+
+h2{
+    position:absolute;
+    left: 35vw;
+    padding-top: 2vw;
+    font-size: 5vw;
+    color: #ffffff; /* Must be white for true black/white inversion */
+    mix-blend-mode: difference;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+header{
+    margin:0px;
+    padding:20px;
+    position:fixed;
+    top:0;
+    z-index: 100;
+}
+
+.anchorbar{
+    display:flex;
+margin:0px;
+padding:0px;
+}
+
+.anchorbarList{
+    display:flex;
+    gap: 2vw;
+    justify-content: start;
+    padding:0px;
+    margin-top:10px;
+}
+
+.anchorbar h3{
+    margin:0px;
+    padding:0px;
+}
+
+
+.anchor-button{
+    border:1px solid black;
+    background-color: white;
+    display:flex;
+    padding:0px;
+    margin:0px;
+    overflow: hidden;
+    border-radius: 1vw;
+    transition:border-radius 0.3s ease;
+}
+
+.anchor-button:hover{
+    border-radius: 5vw;
+}
+
+.anchor-button a{
+    display:flex;
+    align-items: center;
+    margin:0px;
+    padding:1vw 4vw;
+    background-color: white;
+    transition:padding 0.5s ease, background-color 0.5s ease, font-size 0.3s ease;
+}
+
+.anchor-button a:hover{
+    align-items: center;
+    padding:2vw 5vw;
+    font-size: xx-large;
+    background-color: greenyellow;
+}
+
+main{
+    padding:0vw;
+}
+
+hr{
+    border: none;            /* Removes default 3D shading/borders */
+    height:1px;
+    background-color:black;
+    overflow-x: hidden; 
+    margin:4vw 30vw;
+}
+
+
+/* ========================================================================================= ACTUAL HW ITEMS ========================================================================================= */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)); /* tweak as needed */
+    gap: 0; /* Ensure this is zero */
+  }
+  /* Style the auto-generated squares */
+    .square {
+    background-color: salmon;
+    aspect-ratio: 1; /* Keeps them perfectly square */
+    border-radius:0vw;
+    transform: scale(1,1);
+    box-sizing: border-box; 
+    margin: -0.5px 0 0 -0.5px; 
+
+    transition: border-radius 0.1s ease, transform 0.1s ease, background-color 0.1s ease;
+    }
+
+    .square:hover, .square.is-active {
+    background-color:rgb(255, 0, 81);
+    border-radius:10vw;
+    transform: scale(2,1.5);
+    z-index: 50;  
+    pointer-events: none;
+}
+
+/* ================================================================== OVERLAY ITEMS ================================================================== */
+.J-container {
+    display: grid;
+    /* Creates 10 columns and 10 rows, each taking up an equal fraction (1fr) of space */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    
+    /* Scales the grid based on the smaller dimension of the browser window to keep it square */
+    width: 100vmin;
+    height: 100vmin;
+    
+    /* Centers the grid on the screen */
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    
+    gap: 0px; /* Optional: adds space between grid cells */
+    background:royalblue;
+  }
+
+  .J-item {
+    background-color: royalblue;
+  }
+  .J-item-dark{
+    background-color: white;
+  }
+  
+
+#myOverlay{
+    padding-left: 0;
+}
+
+dialog {
+    padding: 0;
+    width:100vw;
+    border: none;
+    background: transparent;
+    z-index: 100;
+    position: fixed;
+    top:2vh;
+    left:35vw;
+  }
+  
+  /* Style the actual visible content box */
+  .modal-content {
+    max-width:28vw; /*make image fill up overlay box____*/
+    background: burlywood;
+    border-radius: 0;
+    overflow-y: auto;
+    color:white;
+
+    background-color: burlywood;
+    background-image: url('../Homepage\ Images/ButtonTextures/BrownWasteLand.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+  }
+  
+  .modal-content img{
+    max-width:25vw; /*make image fill up overlay box____*/
+  }
+  /* The backdrop area outside your modal content */
+  dialog::backdrop {
+    background: royalblue;
+  }
+
+  .IntroOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: royalblue; /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it sits on top of everything */
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Smooth fade-out effect */
+}
+
+.IntroOverlay-content {
+    background-color: #ffffff00;
+    padding: 30px;
+    border-radius: 0px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.IntroOverlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevents clicking invisible elements */
+}
+/*  OVERLAY ITEMS  */
+  
+/* ========================================================================================= NEW EXPERIMENTAL TEXT ITEMS ============================================================================== */
+
+@media (max-width: 900px) {
+
+    header{
+        margin:0px;
+        padding: 0px 20px;
+        position:fixed;
+        top:0;
+        z-index: 100;
+        overflow-x: hidden;
+    }
+
+    .articleTitle{
+        font-size: 1.5em;
+        padding: 3vh 5vw;
+        line-height: 1.5em;
+        display:flex;
+        align-items: flex-end; /* Pushes all items to the bottom */
+        justify-content: end;
+    }
+    
+    .anchorbarList{
+        display:block;
+        padding:0px;
+        margin-top:10px;
+    }
+
+    .anchor-button:last-child{
+        margin-top:2vw;
+    }
+
+    hr{
+        margin:1vw 10vw;
+    }
+}
