@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="icon" type="image/png" href="../creatureO-Images/homepage items/creatureOavatar.png">
+        <title>CreatureO Exercise 6</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Exercise6.css">
+    <script src="../JS/Exercise6.js" defer></script>
+</head>
+      
+<body>      
+      <main>
+        <div class="anchorbar">
+            <div class="anchorbarList">
+                <div class="anchor-button"> <h3><a href="./">back</a></h3> </div>
+            </div>  
+        </div> 
+
+          <div class="phoneNavBar"></div>
+          <h2 style="font-size:xx-large">Javascript Exercise</h2>
+          <br>
+          
+<div style="display:flex; flex-wrap: wrap; justify-content: space-between;">
+    <div>
+          <button class="button1">BEEP</button><br>
+          <button class="button2">BOOP</button><br>
+          <button class="button3">BOP</button><br>
+          <button class="button4">BIP</button>
+    </div>
+          <p></p>
+
+        <figure>
+            <div class="insertableImage"><!--IMAGE GOES HERE--></div>
+        </figure>
+</div>
+      </main>
+<div class="custom-cursor"></div>
+<style>
+.custom-cursor{
+    cursor: crosshair;
+    display:none;
+}
+    
+.custom-cursor.clicked {
+cursor: crosshair;   
+display:block;
+  width: 250px;
+  height: 250px;
+  border: none; /* Use background-color if you want a solid circle */
+  
+  position: fixed; /* Ensures it stays locked relative to the viewport */
+  top: 0;
+  left: 0;
+
+  transform: translate(-50%, -50%); /* Centers the item over the true pointer position */
+  
+  pointer-events: none; /* Vital for the click elements*/
+  
+  transition: transform 0.05s ease-out; /* Smooth transition for positioning updates */
+  z-index: 9999;
+}
+
+    body p{
+        display:flex;
+        justify-content: center;
+        text-align: center;
+        font-size:10em;
+        font-family:'Ranchers', sans-serif;
+    }
+    button{
+        color: black;
+        background-color:yellow;
+        outline:none; border:none;
+        padding:1vw 2vw;
+        margin-bottom:5vh;
+        font-size: 5em;
+        border-radius: 2vw;
+        height:fit-content;
+        transition:font-size 0.3s ease, background-color 0.3s ease, padding 0.2s ease;
+    }
+
+    button:hover{
+        background-color:gold;
+        border:goldenrod 1px solid;
+        padding:2vw 4vw;
+        font-size: 4em;
+        font-weight:bolder;
+        border-radius: 3vw;
+    }
+
+    @media (max-width: 900px) {
+        body p{
+        font-size:4em;
+        }
+        button{
+            padding:0.5vw 1vw;
+        font-size:1.25em;
+        }
+        button:hover{
+            padding:1vw 2vw;
+            font-size: 2em;
+        }
+    }
+</style>
+    
+</body>      
+</html>

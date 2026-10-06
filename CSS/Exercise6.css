@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+
+*{
+    font-family:'Rubik', sans-serif;
+    color: currentColor                        /* Changes text color */
+}
+
+a {/* Changes text color */
+    color: #ffffff;
+    mix-blend-mode: difference;
+  text-decoration-line: underline;       /* Ensures the line is visible */
+  text-decoration-color: currentColor;       /* Changes underline color independently */
+  text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+}
+
+img{
+    border: none
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    margin:0px;
+    overflow-x:hidden;
+    background-color:tomato;
+}
+
+body p{
+    font-size: 1.25em;
+}
+
+h3{
+    margin:0px;
+}
+
+/* =================================== HEADER SECTION ===================================================== */
+header{
+    margin:0px;
+    padding:20px;
+    position:fixed;
+    top:0;
+    z-index: 100;
+}
+
+.anchorbar{
+    display:flex;
+margin:0px;
+padding:0px;
+}
+
+.anchorbarList{
+    display:flex;
+    gap: 2vw;
+    justify-content: start;
+    padding:0px;
+    margin-top:10px;
+}
+
+.anchorbar h3{
+    margin:0px;
+    padding:0px;
+}
+
+
+.anchor-button{
+    border:1px solid black;
+    background-color: yellow;
+    display:flex;
+    padding:0px;
+    margin:0px;
+    overflow: hidden;
+    border-radius: 1vw;
+    transition:border-radius 0.3s ease;
+}
+
+.anchor-button:hover{
+    border-radius: 5vw;
+}
+
+.anchor-button a{
+    display:flex;
+    align-items: center;
+    margin:0px;
+    padding:1vw 4vw;
+    background-color: none;
+    transition:padding 0.5s ease, background-color 0.5s ease, font-size 0.3s ease;
+}
+
+.anchor-button a:hover{
+    align-items: center;
+    padding:2vw 5vw;
+    font-size: xx-large;
+    background-color: red;
+}
+
+
+
+/* =================================== MAIN SECTION ===================================================== */
+main{
+    display:block;
+    padding:1vw 3vw;
+    overflow-x: hidden;
+}
+
+.subpageWrapper{
+    display:block;
+}
+
+.subpageWrapper ul{
+    padding:0px;
+}
+
+.subpageWrapper li a{
+    border:solid 1px rgb(0,255,0);
+    padding:10px 20px;
+    font-weight: 100;
+}
+
+.subpageWrapper li a:hover{
+    color:black;
+    background-color: yellowgreen;
+    font-weight: bolder;
+}
+
+.sub-pages ul{
+    list-style:none;
+    display:flex;
+    column-gap: 0px;
+    padding:0px;
+    margin:0px;
+    font-weight: 100;
+}
+
+.sub-pages li h3{
+    padding:10px 0px;
+    margin:0px;
+    font-weight: 100;
+}
+
+
+/* =================================== Images SECTION ===================================================== */
+
+
+.mainLogo{
+    border:none;
+    outline:none;
+    max-height:3vw; 
+    width: auto;
+}
+
+.lobbySlide{
+    min-width:18vw;
+}
+
+figure{
+    width: 50vh;
+    height: auto;
+    position: relative;   /* this line is the key to letting the overlay work on each grid image */
+    overflow: hidden;
+    border:none;
+    border-radius:5vw;
+    aspect-ratio: 1 / 1; /* Makes the height always match the shrinking width */
+    margin:0px; /* VERY imporatnt to avoid default spacing */
+  }
+  
+  figure img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    object-position: center;
+    display: block;
+    border-radius:5vw;
+  }
+/* =================================== Text SECTION ===================================================== */
+
+main h1{
+display:block;
+}
+
+main p{
+display:block;
+}
+
+/* =================================== FOOTER SECTION ===================================================== */
+footer{
+    display:block;
+}
+
+/*==========================================================
+MOBILE / TABLET OVERRIDES
+Everything above this point is untouched (desktop stays
+exactly as it was). These rules only kick in at narrower
+widths and just override the few properties that were
+causing content to spill past the edge of the screen.
+==========================================================*/
+@media (max-width: 900px) {
+    a:hover{
+        text-decoration: underline;
+    }
+    
+    body{
+        margin:0px;
+        overflow-x:hidden;
+        background-color: tomato;
+    }
+
+    body p{
+        font-size: 1em;
+    }
+    
+/* =================================== HEADER PHONE SECTION ===================================================== */
+
+header{
+    position:sticky;
+    top:0;
+    height:fit-content;
+    max-width:100vw;
+    display:block;
+    align-items: center;
+    background-image: url('../creatureO-Images/homepage\ items/Textures/RustyMetal.jpg');
+    background-position: top;  /*replaces background-attchment: fixed*/
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: keeps it full screen */
+
+    border-bottom:solid 5px grey;
+}
+
+
+header h1{
+    margin:0px;
+    padding:0.5vh 3vh;
+    font-size:1em;
+    font-weight: 900;
+    background: radial-gradient(green,black);
+    border:solid 1px rgb(200, 200, 200);
+    outline:solid 5px rgb(60, 60, 60);
+    border-radius:10px;
+}
+
+header svg{
+    height:1.5rem;
+}
+
+header svg rect{
+height:0.5rem;
+}
+
+.anchorTitle{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top:0.5vh;
+    padding-bottom:1vh;
+}
+
+.anchorbar{
+    padding:0.5rem 3vw;
+    max-width: fit-content;
+}
+
+.anchorbar ul{
+    list-style:none;
+    display:flex;
+    column-gap: 20px;
+    overflow-x: auto;
+    padding:5px;
+    margin:0px;
+}
+
+.anchorbar li{
+    border-radius:10px;    
+    padding:0px;
+    margin:0px;
+}
+
+
+.anchorbar li a{
+    padding:5px 20px;
+}
+
+.anchorbar li a:hover{
+    background-color: rgb(100, 100, 100);
+    font-weight:bolder;
+    padding:5px 20px;
+    border-radius:100px;
+}
+
+    
+/* =================================== Images PHONE SECTION ===================================================== */
+
+
+    .mainLogo{
+        border:none;
+        outline:none;
+        max-height:2rem; 
+        height:auto;
+    }
+    
+    .lobbySlide{
+        min-width:50vw;
+    }
+
+/* =================================== Text PHONE SECTION ===================================================== */
+
+main h1{
+    margin-left:0vw;
+}
+
+
+
+
+
+/* =================================== FOOTER PHONE SECTION ===================================================== */
+    footer{
+        display:block;
+    }
+    
+    
+
+/*====================================================END================================================================*/    
+}
