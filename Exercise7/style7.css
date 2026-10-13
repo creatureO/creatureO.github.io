@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*Rubik, Sans Serif*/
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap'); /*Rancher, Sans Serif*/
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* "VT323", monospace */
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .screen {
+    padding:0px;
+    margin:0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #ffffff;
+    background-color: black;
+    transition: background-color 0.3s, color 0.5s;
+  }
+  
+  .screen.on {
+    color: #000;
+    background-color: teal;
+  }
+  
+  .status {
+    font-family: "VT323", monospace ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20vw;
+    margin: 0;
+  }
+  
+  button {
+    font-family: "VT323", monospace ;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    background-color: salmon;
+    color: #ffffff;
+    mix-blend-mode: difference;    
+    border:none;
+    outline:none;
+    border-radius: 1vw;
+    position:absolute;
+    top:45vh;    left:43vw;
+
+    transform-origin: center;
+
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    padding: 3rem 5rem;
+    font-size: 2rem;
+    border-radius: 4vw;
+  }
