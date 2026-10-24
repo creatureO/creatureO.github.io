@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geiger235 Science</title>
+  <link rel="stylesheet" type="text/css" href="geiger235.css">
+  <script src="geiger.js" defer></script>
+  <style>
+    .firstSection{
+    background-color: #94D7B6;
+    }
+    .transitionPoint{
+    background-image: linear-gradient(to bottom, #94D7B6 5%, #65967d 60%,#000 100%);
+    }
+    .quote{
+    background-color:rgba(33, 86, 165, 0.25);
+    }
+
+    a{
+       color:aqua;
+       line-height: 1.5em;
+        display:block;
+    }
+
+    iframe{
+        border-radius: 
+        1vw; width: 100%; 
+        height:15vw;
+    }
+
+  </style>
+</head>
+
+<body>
+    <div class="phoneNavButton">
+        <button class="nav-toggle hover-target" id="navToggle" aria-label="Open navigation menu">
+            <span class="toggle-text">&#9762</span>
+        </button>
+    
+        <aside class="sidebar-slidable" id="sidebar">
+            <nav>
+                <a href="./"> HOME </a> <!-- HOME -->
+                <a href="./science.html"> SCIENCE </a>
+                <a href="./history.html"> HISTORY </a>
+                <a href="./popCulture.html"> POP CULTURE </a>
+            </nav>
+        </aside>
+    </div>
+    <header>
+        <audio id="sound" controls style="position:fixed; top:0px; left:-9999px;">
+            <source src="homePageIcons/audio/geigerCounter.mp3" type="audio/mpeg" id="geigerCounter">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg id="radSymbol" data-name="rad symbol glowing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+          <defs>
+    
+            <!-- Define the glow filter -->
+            <filter id="colored-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <!-- 1. Define the custom glow color -->
+                <feFlood id="glow-color" flood-color="#00ff51" flood-opacity="1" result="glowColor"/>
+                
+                <!-- 2. Mask the flood color into the shape of the circle -->
+                <feComposite in="glowColor" in2="SourceGraphic" operator="in" result="shapedGlow"/>
+                
+                <!-- 3. Blur the shaped glow color -->
+                <feGaussianBlur id="glowRadius" in="shapedGlow" stdDeviation="25" result="blurredGlow"/>
+                
+                <!-- 4. Layer the original circle on top of the custom blurred glow -->
+                <feMerge>
+                  <feMergeNode in="blurredGlow"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+    
+            <style>
+              .cls-1 {
+                fill: #94D7B6;
+              }
+            </style>
+          </defs>
+          <circle id="new_circle" data-name="new circle" class="cls-1" cx="398.59" cy="400" r="360"  filter="url(#colored-glow)" />
+          <g>
+            <g>
+              <g id="new_circle-3" data-name="new circle">
+                <a href="./"> <circle id="centerDot" cx="399.98" cy="401.16" r="81.81"/> </a> <!--CENTER DOT-->
+              </g>
+              <g><!--PATHS ARE WINGS-->
+                <a href="./history.html"> <path d="M505.75,397.86h224.91c-1.17-119.84-66.08-224.43-162.47-281.49l-112.47,194.83c29.18,18.12,48.9,50.05,50.02,86.66Z" class="wing"/> </a>
+                <a href="./popCulture.html"> <path d="M399.98,506.99c-18.1,0-35.13-4.55-50.03-12.55l-112.47,194.82c47.99,27.13,103.44,42.62,162.5,42.62s114.51-15.49,162.51-42.62l-112.48-194.81c-14.9,8.01-31.93,12.56-50.03,12.56Z" class="wing"/> </a>
+                <a href="./science.html"> <path d="M344.22,311.21l-112.48-194.82c-96.37,57.05-161.28,161.64-162.45,281.47h224.91c1.12-36.6,20.84-68.52,50.01-86.65Z" class="wing"/> </a>
+              </g>
+            <text x="325" y="150" class="science"
+              font-family="sans-serif"
+              text-anchor="middle" 
+              dominant-baseline="middle">
+              SCIENCE
+            </text>
+            <text x="375" y="550" class="history"
+            font-family="sans-serif"
+            text-anchor="middle" 
+            dominant-baseline="middle">
+            HISTORY
+            </text>
+            <text x="400" y="600" class="popCulture"
+            font-family="sans-serif"
+            text-anchor="middle" 
+            dominant-baseline="middle">
+            POP
+            </text>
+            <text x="400" y="650" class="popCulture"
+            font-family="sans-serif"
+            text-anchor="middle" 
+            dominant-baseline="middle">
+            CULTURE
+            </text>
+            <text x="400" y="400" class="popCulture"
+              font-family="sans-serif"
+              text-anchor="middle" 
+              dominant-baseline="middle">
+              HOME
+            </text>
+            </g>
+          </g>
+    
+        </svg>
+    </header>
+<main>
+<section class="firstSection">
+<div class="pageTitle">
+    <h1 class="vibrate-text" style="font-family:'Times New Roman', Times, serif;">
+        <span>S</span><span>C</span><span>I</span><span>E</span><span>N</span><span>C</span><span>E</span><span></span><span></span>
+    </h1>
+</div>
+</section>
+
+<section class="transitionPoint">
+    <div class="textArea"><!-- TEXT -->
+        <h2>IN THE BEGINNING...</h2>
+        <p>
+    The universe expanded from a hot dense state, a point of 
+    infinite mass and infinitesimally small volume. The energy 
+    was released and expanded into the cosmos.
+    In the first minutes, the atoms were super hot, about 18 
+    billion degrees celsius hot <br><br>
+        <strong style="border: none; padding:0.5vw 1vw; border-radius: 50vw; background-image: linear-gradient(to right, red, yellow);">18, 000 , 000 ,000 ċ</strong> <br><br>
+    Electrons neutrons and protons formed once it cooled enough. 
+    A few minutes after that, Hydrogen and Helium were formed. It 
+    wouldn’t be until millions and billions of years later that 
+    oxygen and iron would form.<br><br>
+    Nuclear reactions would happen around this time to make stars
+        </p>
+    </div>  
+    <div class="imageArea"><!-- IMAGES -->
+        <div class="elementCard">
+            <h3>1</h3>
+            <h1 style="display:flex; justify-content: center; font-size:10em; margin:0px;">H</h1>
+            <h3>Hydrogen<br>1.008</h3>
+        </div>
+        <p>Hydrogen element</p>
+        <img class="lobbySlide" src="./science/radiationScience7.webp" />
+        <p>Theorized graphic of the Big Bang</p>
+    </div>
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./science/radiationScience11.webp"/>
+        <p>Atomic diagram</p>
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>ATOMS</h2>
+        <p>
+        An atom is the fundamental unit of the universe and matter as a whole. 
+        There’s no atomic energy or bombs without these little guys.<br><br>
+        Atoms are made of simple forces.<br><br>
+        <strong>The Nucleus:</strong> <br>
+        is the center, composed of 99.99% of all the matter of 1 atom, making up less than 1% of the total volume. 
+        It’s made of the Positive Protons and Neutral Neutrons.<br><br>
+        <strong>The Cloud of Electrons:</strong><br> 
+        around the nucleus are Negatively Charged. They allow atoms to bond and stay together.<br><br>
+        Atoms need humongous amounts of energy to contain all these particles together.
+
+        </p>
+    </div>  
+</section>
+
+<section class="demoPanel" style="position:relative;">
+    <div class="textArea" style="z-index: 10;"><!-- TEXT -->
+        <h2>ATOMIC RAYS</h2>
+        <p>Radiation is in forms of non-ionizing radiation and ionizing radiation.<br><br>
+            <strong>Non-ionizing:</strong><br>
+            Microwaves, radio waves, visible light.<br><br>
+            Non-ionizing is everything from your microwaved dinner to the internet and digital tech uses these, letting the modern world be comfortable and entertained.<br><br>
+            <strong>Ionizing:</strong><br>												
+            X-rays, gamma-rays, UV.<br><br>		
+            Ionizing is stuff like bombs, power plants and medical tech use this heavy duty power.
+        </p>
+    </div>
+
+    <div class="em-container">
+        <!-- ViewBox customized for precise horizontal line stroke tracking -->
+        <svg class="em-wave" xmlns="http://w3.org" xmlns:xlink="http://w3.org" viewBox="0 0 100 150" preserveAspectRatio="none">
+          <defs>
+            <!-- A perfect mathematical sine wave path template. 
+                 Note that the vertical end 'v44h-352z' from the previous code is completely removed. -->
+            <path id="sine-wave" d="M 0,50 C 25,20 25,80 50,50 C 75,20 75,80 100,50 C 125,20 125,80 150,50 C 175,20 175,80 200,50" />
+          </defs>
+          
+          <g class="wave-line">
+            <use xlink:href="#sine-wave" x="0" y="0" />
+            <use xlink:href="#sine-wave" x="0" y="0" />
+          </g>
+        </svg>
+      </div>
+</section>
+
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <div class="elementCard">
+            <h3>92</h3>
+            <h1 style="display:flex; justify-content: center; font-size:10em; margin:0px;">U</h1>
+            <h3>Uranium<br>238.03</h3>
+        </div>
+        <p>Uranium element</p>
+        <img class="lobbySlide" src="./science/radiationScience8.webp"/>
+        <p>Uranium ore</p>
+        <img class="lobbySlide" src="./science/radiationScience10.webp"/>
+        <p>Geiger counter</p><br>
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>NOT TOO COMPLICATED</h2>
+        <p>
+            Radiation levels are measured in <br><br>
+        <strong>Rad</strong><br>										
+        Rads (rad) are units of radiation energy does absorbed by unit of mass.<br><br>
+        <span class="quote">1 rad = 0.01Gy=0.01 J/kg</span><br><br>
+        <strong>Sievert</strong><br>
+        Sieverts (Sv) calculate the amount of harm and health effects that ionizing 
+        radiation can potentially do to tissues and substances.<br><br>
+        <span class="quote">It takes into account the energy absorbed, tissue sensitivity, and and (ie: 5000kib).</span><br>
+        Those fancy Geiger Counters actually measure Counts per second (cps), counting raw number of ionizing radiation particles and waves like beta and x rays.
+        </p>    
+    </div>  
+</section>
+
+<section>
+    <div class="textArea"><!-- TEXT -->
+        <h2>ATOMIC ENERGY</h2>
+        <p>The basic process behind the atomic energies we use in modern life are:<br><br>
+            <strong>Nuclear Fission:</strong><br><br>
+            <span class="quote">Producing energy from splitting apart atoms</span><br>
+            Fission uses unstable, easy-to-split atoms like Uranium-235 (a rare 
+            isotope of Uranium). A low-power neutron is fired at a uranium atom, 
+            splits it, sends those neutrons flying to do the same thing. It’s a 
+            chain reaction that generates tons of heat energy to move things like 
+            a steam engine!<br><br>
+            <strong>Nuclear Fusion:</strong><br><br>
+            <span class="quote">Producing energy from making new atoms.</span><br>
+            Fusion generates energy by fusing matter together. Hydrogen isotopes 
+            that repel each other are use fission power to fuse, generating more energy 
+            than the fission. This is seen in things like the sun and hydrogen bombs. 
+        </p>
+    </div>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./science/radiationScience1.webp"/>
+        <p>Fission view</p>
+        <img class="lobbySlide" src="./science/radiationScience4.webp"/>
+        <p>Fission reactors</p>
+        <img class="lobbySlide" src="./science/radiationScience9.webp"/>
+        <p>Uranium reactor rods</p>
+    </div>
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./science/radiationScience5.webp"/>
+        <p>Atomic Bomb (model Fat-Man/Little Boy 1945)</p>
+        <img class="lobbySlide" src="./science/radiationScience6.webp"/>
+        <p>Atomic Bomb energy core</p>
+        <img class="lobbySlide" src="https://cdn.sanity.io/images/2qh99brn/production/4bc77316c2c97be8dbb1cc0d8d4711a170dbf66a-4000x2250.jpg?w=1440&auto=format&q=90"/>
+        <p>Total nuclear wasteland</p>
+        <img class="lobbySlide" src="./science/radiationScience12.webp"/>
+        <p>Protests against the nukes</p>
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>ATOM BOMBS</h2>
+        <p>
+            Though Morbid, it’s important to acknowledge this part. Fusion weapons like hydrogen bombs are 
+            far more destructive than the fission weapons used in WWII. uranium and plutonium weapons are 
+            still ready to be used in a global thermonuclear conflict.<br><br>
+            Such a conflict would result in the death of billions and the irradiation of earth to appoint of near 
+            inhospitality. Nuclear winters would devastate many key infrastructure and agricultural points needed for our 
+            population to maintain its current amount. Life is resilient and will come back to flourishing, but the same 
+            cannot be said for human life which is inventive but fragile in dire circumstances.<br><br>
+            We have enough radioactive weapons to destroy our society/planet almost 50 times over. Our stockpile of precise 
+            and armageddon bombs is well over 9,000. It would only take 300 to 400 of these to end it all.  
+        </p>    
+    </div>  
+</section>
+
+<section class="backgroundBasedImage">
+    <img src="./homePageIcons/simpleABomb2.webp">
+</section>
+
+<section>
+    <div class="textArea"><!-- TEXT -->
+        <h2>MORE</h2>
+        <p>
+            <a href="https://unitednuclear.com/" target="_blank" style="font-size: 2em;">United Nuclear</a><br>
+            United Nuclear is a retail based site, distributing radiation based recources for curious and professional minds to obtain, ranging from merchandise to scientific equipment. <br><br><br>
+            <a href="https://www.iaea.org/newscenter/news/what-is-radiation" target="_blank" style="font-size: 2em;">IAEA</a><br>
+            The International Atomic Energy Agency is the world's central intergovernmental forum for scientific and technical cooperation in the nuclear field. It works for the safe, secure and peaceful uses of nuclear science and technology. <br><br><br>
+            <a href="https://www.cdc.gov/radiation-emergencies/hcp/isotopes/uranium-235-238.html" target="_blank" style="font-size: 2em;">CDC</a><br>
+            The Center for Disease Control offers online recources do document, explain and list pripority steps in radiation saftey in the danger cases of uranium and fallout. <br><br><br>
+            <a href="https://www.icrp.org/" target="_blank" style="font-size: 2em;">ICRP</a><br>
+            The International Comission on Radiological Protection documents recommendations and advice as papers in various scientific journals in the fields of medicine and physics. <br><br><br>
+        </p>
+    </div>
+    <div class="imageArea"><!-- IMAGES -->
+        <iframe src="https://unitednuclear.com/" title="Description of the content"></iframe>
+        <iframe src="https://www.iaea.org/themes/custom/iaea_2025/build/assets/images/logo.svg" title="Description of the content"></iframe>
+        <iframe src="https://www.cdc.gov/radiation-emergencies/hcp/isotopes/uranium-235-238.html" title="Description of the content"></iframe>
+        <iframe src="https://www.icrp.org/" title="Description of the content"></iframe>
+    </div>
+</section>
+
+<section style="height:50vw"></section><!-- BLACK BUFFER -->
+</main>
+
+</body>
+
+</html>

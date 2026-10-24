@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geiger235</title>
+  <link rel="stylesheet" type="text/css" href="geiger235.css">
+  <script src="geiger.js" defer></script>
+  <style>
+    h1{
+        font-size: 3em;
+    }
+
+    .pageTitle{
+    position:absolute;
+    top:-2.5vw; left:0px;
+    display:flex;
+    width:100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    }
+
+@media screen and (max-width: 900px){
+    .pageTitle{
+    height:50vh;
+}
+}
+  </style>
+
+</head>
+
+<body>
+<div class="phoneNavButton">
+    <button class="nav-toggle hover-target" id="navToggle" aria-label="Open navigation menu">
+        <span class="toggle-text">&#9762</span>
+    </button>
+
+    <aside class="sidebar-slidable" id="sidebar">
+        <nav>
+            <a href="./"> HOME </a> <!-- HOME -->
+            <a href="./science.html"> SCIENCE </a>
+            <a href="./history.html"> HISTORY </a>
+            <a href="./popCulture.html"> POP CULTURE </a>
+        </nav>
+    </aside>
+</div>
+
+<header>
+    <audio id="sound" controls style="position:fixed; top:0px; left:-9999px;">
+        <source src="homePageIcons/audio/geigerCounter.mp3" type="audio/mpeg" id="geigerCounter">
+        Your browser does not support the audio element.
+    </audio>
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg id="radSymbol" data-name="rad symbol glowing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+
+        <!-- Define the glow filter -->
+        <filter id="colored-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <!-- 1. Define the custom glow color -->
+            <feFlood id="glow-color" flood-color="#00ff51" flood-opacity="1" result="glowColor"/>
+            
+            <!-- 2. Mask the flood color into the shape of the circle -->
+            <feComposite in="glowColor" in2="SourceGraphic" operator="in" result="shapedGlow"/>
+            
+            <!-- 3. Blur the shaped glow color -->
+            <feGaussianBlur id="glowRadius" in="shapedGlow" stdDeviation="25" result="blurredGlow"/>
+            
+            <!-- 4. Layer the original circle on top of the custom blurred glow -->
+            <feMerge>
+              <feMergeNode in="blurredGlow"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <style>
+          .cls-1 {
+            fill: #ffdc00;
+          }
+        </style>
+      </defs>
+      <circle id="new_circle" data-name="new circle" class="cls-1" cx="398.59" cy="400" r="360"  filter="url(#colored-glow)" />
+      <g>
+        <g>
+          <g id="new_circle-3" data-name="new circle">
+            <a href="./"> <circle id="centerDot" cx="399.98" cy="401.16" r="81.81"/> </a> <!--CENTER DOT-->
+          </g>
+          <g><!--PATHS ARE WINGS-->
+            <a href="./history.html"> <path d="M505.75,397.86h224.91c-1.17-119.84-66.08-224.43-162.47-281.49l-112.47,194.83c29.18,18.12,48.9,50.05,50.02,86.66Z" class="wing"/> </a>
+            <a href="./popCulture.html"> <path d="M399.98,506.99c-18.1,0-35.13-4.55-50.03-12.55l-112.47,194.82c47.99,27.13,103.44,42.62,162.5,42.62s114.51-15.49,162.51-42.62l-112.48-194.81c-14.9,8.01-31.93,12.56-50.03,12.56Z" class="wing"/> </a>
+            <a href="./science.html"> <path d="M344.22,311.21l-112.48-194.82c-96.37,57.05-161.28,161.64-162.45,281.47h224.91c1.12-36.6,20.84-68.52,50.01-86.65Z" class="wing"/> </a>
+          </g>
+        <text x="325" y="150" class="science"
+          font-family="sans-serif"
+          text-anchor="middle" 
+          dominant-baseline="middle">
+          SCIENCE
+        </text>
+        <text x="375" y="550" class="history"
+        font-family="sans-serif"
+        text-anchor="middle" 
+        dominant-baseline="middle">
+        HISTORY
+        </text>
+        <text x="400" y="600" class="popCulture"
+        font-family="sans-serif"
+        text-anchor="middle" 
+        dominant-baseline="middle">
+        POP
+        </text>
+        <text x="400" y="650" class="popCulture"
+        font-family="sans-serif"
+        text-anchor="middle" 
+        dominant-baseline="middle">
+        CULTURE
+        </text>
+        <text x="400" y="400" class="popCulture"
+          font-family="sans-serif"
+          text-anchor="middle" 
+          dominant-baseline="middle">
+          HOME
+        </text>
+        </g>
+      </g>
+
+    </svg>
+</header>
+<main>
+<div class="pageTitle">
+        <div class="atom">
+            <div class="nucleus"></div>
+            <svg id="radSymbol" data-name="rad symbol glowing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" style="max-width:25%; padding-top:4vw;" class="phoneHomeRadSymbol">
+                <defs>
+          
+                  <style>
+                    .cls-1 {
+                      fill: #ffdc00;
+                    }
+                  </style>
+                </defs>
+                <circle id="new_circle" data-name="new circle" class="cls-1" cx="398.59" cy="400" r="360"/>
+                <g>
+                  <g>
+                    <g id="new_circle-3" data-name="new circle">
+                      <a href="./"> <circle id="centerDot" cx="399.98" cy="401.16" r="81.81"/> </a> <!--CENTER DOT-->
+                    </g>
+                    <g><!--PATHS ARE WINGS-->
+                     <path d="M505.75,397.86h224.91c-1.17-119.84-66.08-224.43-162.47-281.49l-112.47,194.83c29.18,18.12,48.9,50.05,50.02,86.66Z" class="wing"/>
+                     <path d="M399.98,506.99c-18.1,0-35.13-4.55-50.03-12.55l-112.47,194.82c47.99,27.13,103.44,42.62,162.5,42.62s114.51-15.49,162.51-42.62l-112.48-194.81c-14.9,8.01-31.93,12.56-50.03,12.56Z" class="wing"/>
+                     <path d="M344.22,311.21l-112.48-194.82c-96.37,57.05-161.28,161.64-162.45,281.47h224.91c1.12-36.6,20.84-68.52,50.01-86.65Z" class="wing"/>
+                    </g>
+                  </g>
+                </g>
+          
+              </svg>
+            <!-- Orbit 1 -->
+            <div class="orbit orbit-1">
+              <div class="electron"></div>
+            </div>
+            
+            <!-- Orbit 2 -->
+            <div class="orbit orbit-2">
+              <div class="electron"></div>
+            </div>
+            
+            <!-- Orbit 3 -->
+            <div class="orbit orbit-3">
+              <div class="electron"></div>
+            </div>
+          </div>
+</div>
+<section class="firstSection">
+    <h1>geiger235</h1>
+
+
+</section>
+
+<section class="firstSection" style="height:fit-content">
+<div class="textArea"><!-- TEXT -->
+    <h2 style="color:black;">RADIATION</h2>
+    <p style="color:black;">It’s a beautiful creation of God. Given the right use,
+     it can produce wonderful results, yet due to pollution
+     and violence, it’s got a bad wrap. Let’s clear up some
+    misconceptions.</p>
+</div>
+<div class="imageArea"><!-- IMAGES -->
+    <img class="lobbySlide" src="./science/radiationScience2.webp"/>
+    <p style="color:black;">Power plant diagram</p>
+</div>
+    
+</section>
+
+<section class="firstSection" style="height:fit-content">
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./science/radiationScience3.webp"/>
+        <p style="color:black;">Power plant blueprint</p>
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2 style="color:black;">WHAT IS IT?</h2>
+        <p style="color:black;">Radiation is: 
+            <br><br>
+            <span class="quote">
+            <em>“Radiation is energy that 
+            moves from one place to 
+            another in a form that can 
+            be described as waves 
+            or particles.”</em>
+            <br><br>- International Atomic Energy Agency (2023).
+        </span>
+            <br>
+            Radiation has been in invisible force we interact with everyday with in the sun, our consumer products, water, and medicine. </p>
+    </div>  
+</section>
+
+<section class="transitionPoint">
+    <div class="textArea"><!-- TEXT -->
+        <h2>USEFUL?</h2>
+        <p>Radiation can be used in:<br><br>
+            <strong>Health:</strong><br> Bio-med procedures use radiation to diagnose cancer and image body parts for physical and genetic damage.<br><br>
+            <strong>Energy:</strong><br> It’s not just uranium power plants, but also the solar radiation that fuels our solar panels for green sustainable futures.<br><br>
+            <strong>Protecting/Managing Nature:</strong><br> Radiation is used to purify wastewater and mutate crops to be more efficient in a worsening climate.<br><br>
+            <strong>Industrialism:</strong><br> Nuclear tech uses radiation to date historical relics, strengthen chemical products, and improve parts for manufacturing. 
+            </p>
+    </div>  
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./science/radiationScience13.webp"/>
+        <p>Power plant's clean energy</p>    
+    </div>
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./science/radiationScience14.webp"/>
+        <p>X-ray scanning</p>        
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>BOTTOM LINE...</h2>
+        <p>Ionising radiations are what we typically think of. They are the 
+            powerful portions of the electromagnetic spectrum or subatomic 
+            particles that can move with high energy to jostle 
+            around atomic structures. <br><br>
+            Think of it in medicine! X-rays look at your bones<br><br>
+            Gamma rays can target malicious dna and cancer cells in radiotherapy sessions. <br><br>
+            Beta rays and electrons help map the body’s metabolic structure by showing up 
+            on monitors, making the invisible visible!√]]
+        </p>
+    </div>  
+</section>
+
+<section>
+    <div class="textArea"><!-- TEXT -->
+        <h2>SO...</h2>
+        <p>Like radiation waves, the good is 
+            often unseen, and the bad is felt. 
+            Look around and see the wonders!</p>
+    </div>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./popCulture/fallout6.webp" style="width:50%;"/>
+        <p>Fallout: A Post Nuclear Role Playing Game</p>        
+    </div>
+</section>
+
+<section style="height:50vw"></section><!-- BLACK BUFFER -->
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geiger235 History</title>
+  <link rel="stylesheet" type="text/css" href="geiger235.css">
+  <script src="geiger.js" defer></script>
+  <style>
+    .firstSection{
+    background-color: #527BB5;
+    }
+    .transitionPoint{
+    background-image: linear-gradient(to bottom, #527BB5 5%, #3b5a85 60%,#000 100%);
+    }
+    .quote{
+    background-color:rgba(33, 86, 165, 0.25);
+    }
+
+    .vibrate-text span {
+    padding:0.15vw;
+    background-image: radial-gradient(rgb(119, 246, 255)50%, rgb(0, 181, 191) 100%);
+    border-radius: 5vw;
+    display: inline-block; /* Required for transforms to work on inline elements */
+    animation: vibrate 0.1s linear infinite; /*randomized delay via JS for a chaotic look */
+    }
+  </style>
+</head>
+
+<body>
+    <div class="phoneNavButton">
+        <button class="nav-toggle hover-target" id="navToggle" aria-label="Open navigation menu">
+            <span class="toggle-text">&#9762</span>
+        </button>
+    
+        <aside class="sidebar-slidable" id="sidebar">
+            <nav>
+                <a href="./"> HOME </a> <!-- HOME -->
+                <a href="./science.html"> SCIENCE </a>
+                <a href="./history.html"> HISTORY </a>
+                <a href="./popCulture.html"> POP CULTURE </a>
+            </nav>
+        </aside>
+    </div>
+    <header>
+        <audio id="sound" controls style="position:fixed; top:0px; left:-9999px;">
+            <source src="homePageIcons/audio/geigerCounter.mp3" type="audio/mpeg" id="geigerCounter">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg id="radSymbol" data-name="rad symbol glowing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+          <defs>
+    
+            <!-- Define the glow filter -->
+            <filter id="colored-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <!-- 1. Define the custom glow color -->
+                <feFlood id="glow-color" flood-color="#00ff51" flood-opacity="1" result="glowColor"/>
+                
+                <!-- 2. Mask the flood color into the shape of the circle -->
+                <feComposite in="glowColor" in2="SourceGraphic" operator="in" result="shapedGlow"/>
+                
+                <!-- 3. Blur the shaped glow color -->
+                <feGaussianBlur id="glowRadius" in="shapedGlow" stdDeviation="25" result="blurredGlow"/>
+                
+                <!-- 4. Layer the original circle on top of the custom blurred glow -->
+                <feMerge>
+                  <feMergeNode in="blurredGlow"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+    
+            <style>
+              .cls-1 {
+                fill: #527BB5;
+              }
+            </style>
+          </defs>
+          <circle id="new_circle" data-name="new circle" class="cls-1" cx="398.59" cy="400" r="360"  filter="url(#colored-glow)" />
+          <g>
+            <g>
+              <g id="new_circle-3" data-name="new circle">
+                <a href="./"> <circle id="centerDot" cx="399.98" cy="401.16" r="81.81"/> </a> <!--CENTER DOT-->
+              </g>
+              <g><!--PATHS ARE WINGS-->
+                <a href="./history.html"> <path d="M505.75,397.86h224.91c-1.17-119.84-66.08-224.43-162.47-281.49l-112.47,194.83c29.18,18.12,48.9,50.05,50.02,86.66Z" class="wing"/> </a>
+                <a href="./popCulture.html"> <path d="M399.98,506.99c-18.1,0-35.13-4.55-50.03-12.55l-112.47,194.82c47.99,27.13,103.44,42.62,162.5,42.62s114.51-15.49,162.51-42.62l-112.48-194.81c-14.9,8.01-31.93,12.56-50.03,12.56Z" class="wing"/> </a>
+                <a href="./science.html"> <path d="M344.22,311.21l-112.48-194.82c-96.37,57.05-161.28,161.64-162.45,281.47h224.91c1.12-36.6,20.84-68.52,50.01-86.65Z" class="wing"/> </a>
+              </g>
+            <text x="325" y="150" class="science"
+              font-family="sans-serif"
+              text-anchor="middle" 
+              dominant-baseline="middle">
+              SCIENCE
+            </text>
+            <text x="375" y="550" class="history"
+            font-family="sans-serif"
+            text-anchor="middle" 
+            dominant-baseline="middle">
+            HISTORY
+            </text>
+            <text x="400" y="600" class="popCulture"
+            font-family="sans-serif"
+            text-anchor="middle" 
+            dominant-baseline="middle">
+            POP
+            </text>
+            <text x="400" y="650" class="popCulture"
+            font-family="sans-serif"
+            text-anchor="middle" 
+            dominant-baseline="middle">
+            CULTURE
+            </text>
+            <text x="400" y="400" class="popCulture"
+              font-family="sans-serif"
+              text-anchor="middle" 
+              dominant-baseline="middle">
+              HOME
+            </text>
+            </g>
+          </g>
+    
+        </svg>
+    </header>
+<main>
+<section class="firstSection">
+    <div class="pageTitle">
+        <h1 class="vibrate-text" style="font-family:'Times New Roman', Times, serif;">
+            <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>Y</span><span></span><span></span>
+        </h1>
+    </div>
+</section>
+
+<section class="transitionPoint">
+    <div class="textArea"><!-- TEXT -->
+        <h2>IT STARTED?</h2>
+        <p>
+            Since the dawn of mankind, humans have experienced invisible forces and just took them as they were. Long before 
+            understanding radiation, life alongside naturally radioactive materials was normal.<br><br>
+            Cosmic radiation, sunlight, bananas.
+        </p>
+    </div>  
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./history/radiationHistory1.webp"/>
+        <p>Bannanas contain more radiation than most foods</p>
+    </div>
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./history/radiationHistory2.webp"/>
+        <p>X-ray historical landmark</p>
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>SEEN</h2>
+        <p>
+            In 1895 Wilhelm Conrad Röntgen discovered <br>X-rays by experimenting and revealing a radiation that could pass through
+            soft tissue and expose bones, as photography was already understood to be from light before this.<br><br>
+            The invisibility of radiation was literally seen for the first time.
+        </p>
+    </div>  
+</section>
+
+<section>
+    <div class="textArea"><!-- TEXT -->
+        <h2>CURIOUS MINDS</h2>
+        <p>
+            From 1896–1903 <strong>Henri Becquerel</strong><br> 
+            observed uranium’s miraculous radiation episodes.<br><br>
+            <strong>Marie Curie</strong><br> 
+            studied it too and coined “radioactivity” as the phenomenon.<br><br>
+            Working together in 1898, they both discovered polonium and radium. Marie was unfortunately killed by aplastic anaemia (low blood cell production) which was probably due to her prolonged exposure to radiation, damaging her bone marrow.
+        </p>
+    </div>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./history/radiationHistory3.webp"/>
+        <p>Madam Curie working in her lab</p>    
+    </div>
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./history/radiationHistory4.webp"/>
+        <p>Radium girls</p>
+        <img class="lobbySlide" src="https://media.cnn.com/api/v1/images/stellar/prod/171208172124-radithor-water-bottle.jpg?q=w_2310,h_3076,x_0,y_0,c_fill"/>
+        <p>Radium beauty products</p>
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>RAD AGE BEGINS</h2>
+        <p>
+            In the 1900s to 1930s radioactivity became associated with medical treatments, used for scientific progress, glowing consumer products.<br><br>
+            People supposed health benefits, but this mistake caused deaths and illnesses like the radium girls, who used it in their makeup or 
+            were exposed to copious amounts in military glow-in-the-dark clock factories.<br><br>
+            These flaws exposed radiation dangers changing public attitudes. Radiation was made clear not to be screwed with.
+        </p>
+    </div>  
+</section>
+
+<section>
+    <div class="textArea"><!-- TEXT -->
+        <h2>KABOOM</h2>
+        <p>
+            From the 1930s to the end of WW2 in 1945, nuclear fission was worked on and mastered by the Americans, defeating the Nazis and Japanese.<br><br>
+            The discovery of the neutron, the Manhattan Project, and culmination of the most brilliant scientific minds saw the emergence of the atomic bomb.<br><br>
+            Radiation, once a scientific curiosity, became death, the destroyer of worlds.<br><br>
+            Robert J. Oppenheimer, Albert Einstein, and many jewish refugees from europe were credited with the world altering weapon that was used on 
+            Hiroshima and Nagasaki.<br><br>
+            To this day, no other country has seen the use of nukes in warfare. Let’s hope it stays that way.
+        </p>
+    </div>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./history/radiationHistory5.webp"/>
+        <p>Hiroshima and Nagasaki experienced similar levels of bombs</p>        
+    </div>
+</section>
+
+<section>
+    <div class="imageArea"><!-- IMAGES -->
+        <img class="lobbySlide" src="./history/radiationHistory6.webp"/>
+        <p>USSR in the Cold War Arms Race against the United States of America</p>
+        <img class="lobbySlide" src="https://multimedialearningllc.wordpress.com/wp-content/uploads/2010/05/cold-war.gif"/>
+        <p>Arms Race political cartoon</p>             
+    </div>      
+    <div class="textArea"><!-- TEXT -->
+        <h2>I DON’T WANT TO SET THE WORLD ON FIRE</h2>
+        <p>
+            Post 1940s, the 50s to 1990s saw a terrible Cold War between the USSR and the USA. Nuclear testing skyrocketed especially in places like 
+            Bikini Atoll and Nevada, going from dropper bombs to missiles and precise ICBMs.<br><br>
+            The nuclear arms race between the two global superpowers saw the ability to wipe out life on earth as a simple means of pushing a button.<br><br>
+            Civil defense, radiation based power plants, radioactive medicine, and major nuclear accidents marked the rapid expansion of technology 
+            from the Cold War drive to innovate.<br><br>
+            Even without mutually assured destruction, modern events like Chernobyl nuclear detonation and Fukushima power plant failure saw how devastating 
+            the misshandling of such a powerful energy source could be.<br><br>
+        </p>
+    </div>  
+</section>
+
+<section style="height:50vw"></section><!-- BLACK BUFFER -->
+</main>
+
+</body>
+
+</html>
