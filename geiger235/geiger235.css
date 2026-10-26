@@ -535,7 +535,7 @@ nav a {
     top: 2rem;
     left: 2rem;
     z-index: 101;
-    background: #ffdc00;
+    background: none;
     border: none;
     border-radius: 50vw;
     color: white; 
@@ -548,7 +548,7 @@ nav a {
 }
 
 .nav-toggle:hover {
-    background: #ffdc00; 
+    background: none;
     color: black;
     transform: scale(1.05);
 }
@@ -613,8 +613,17 @@ nav a {
     }
 
     .imageArea{
-        width: 80vw;
-    }
+      width: 80vw;
+      padding:1vh 2vw;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap:2.5vh;
+  }
+  
+  .imageArea img{
+      width:40vw;
+  }
+
 
     .quote{
         display: block;

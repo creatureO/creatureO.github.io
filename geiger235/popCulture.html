@@ -37,9 +37,32 @@
       width: auto;
     }
 
+    .musicArea{
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      padding: 1vh 0vw;
+      gap: 5vh;
+      min-width:stretch;
+      width:80vw;
+    }
+
+    .musicArea p{
+      max-width: 100%;
+    }
+
     @media screen and (max-width: 900px){
     .pageTitle{
       padding-top: 10vh;
+    }
+
+    .musicArea{
+      display: grid; 
+      grid-template-columns: repeat(1, 1fr); 
+    }
+
+    section audio{
+      width:80vw;
+      padding:0vw 5vw;
     }
   }
   </style>
@@ -48,7 +71,7 @@
 <body>
   <div class="phoneNavButton">
     <button class="nav-toggle hover-target" id="navToggle" aria-label="Open navigation menu">
-        <span class="toggle-text">&#9762</span>
+      <img src="./homePageIcons/geiger235Logo.svg" style="width:3.5rem; height: 3.5rem;"/>
     </button>
 
     <aside class="sidebar-slidable" id="sidebar">
@@ -243,7 +266,7 @@
       in a time defined by political conflict and consequences that could end the world.
       </p>
   </div><br><br>
-  <div class="imageArea" style="display: grid; grid-template-columns: repeat(2, 1fr); column-gap: auto; min-width:stretch;">
+  <div class="musicArea">
     <p>“Uranium Rock” Warren Smith (1931)</p>
     <audio controls>
       <source src="popCulture/audio/uraniumRock.mp3" type="audio/mpeg">
