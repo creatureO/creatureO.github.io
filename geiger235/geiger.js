@@ -3,25 +3,48 @@ const new_circle = document.querySelector('header svg #new_circle');
 const glowElement = document.querySelector('#glow-color');// 1. Select the feFlood element by its ID
 const glowRadius = document.querySelector('#glowRadius');// 1. Select the feFlood element by its ID
 const sound = document.querySelector('#sound');// 1. Select the feFlood element by its ID
-
+const playSound = document.getElementById('geigerCounter');
 
 /* --- SIDEBAR TOGGLE --- */
 const navToggle = document.getElementById("navToggle");
 const sidebar = document.getElementById("sidebar");
+const sidebarSlidable = document.querySelector(".sidebar-slidable");
 
 if (navToggle && sidebar) {
     navToggle.addEventListener("click", (e) => {
         e.stopPropagation(); 
         sidebar.classList.toggle("open");
+
+        if (sidebar.classList.contains("open")){
+        sound.src = 'homePageIcons/audio/geigerCounter.mp3'; 
+        sound.load();
+        sound.play().catch(error => {
+        console.error("Audio playback failed:", error);
+        });
+        } else{
+        sound.src = ''; 
+        sound.load();
+        sound.play().catch(error => {
+        console.error("Audio playback failed:", error);
+        });
+        }
+
     });
     document.addEventListener("click", (e) => {
         if (sidebar.classList.contains("open") && !sidebar.contains(e.target)) {
             sidebar.classList.remove("open");
+
+            sound.src = ''; 
+            sound.load();
+            sound.play().catch(error => {
+            console.error("Audio playback failed:", error);
+            });
         }
     });
 }
 
-const playSound = document.getElementById('geigerCounter');
+
+
 
 // Triggers the exact moment the mouse enters the SVG
 headerSvg.addEventListener('mouseenter', () => {
@@ -47,7 +70,7 @@ headerSvg.addEventListener('mouseleave', () => {
         glowElement.setAttribute('flood-color', '#00ff51');
         glowRadius.setAttribute('stdDeviation', '25');
     }
-    playSound.src = '';//sound
+    playSound.src = '';// cancel sound
     sound.load();
     sound.play();
 
