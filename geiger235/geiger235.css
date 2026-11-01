@@ -711,36 +711,46 @@ nav a {
       }
     }
 
-
-
-      /* WAVE */
-      .em-wave {
-        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
+    .em-wave {
+      fill: none; /* Removes the shape fill completely */
+    }
+    
+    /* Base path styling */
+    .wave-line > use {
+      fill: none; /* Removes the shape fill completely */
+      stroke: #00ffcc; /* Cyan electric field color */
+      stroke-width: 2px; /* Adjust line thickness here */
+    }
+    
+    /* Primary high-energy wave line */
+    .wave-line > use:nth-child(2) {
+      fill: none;
+      stroke: rgba(0, 150, 255, 0.4); /* Blue magnetic field proxy */
+    }
+    
+    /* Subdued tracking echo/offset to show phase or depth */
+    .wave-line > use:nth-child(1) {
+      fill: none;
+      stroke: #00ffcc; /* Cyan electric field color */
+    }
+    
+    @keyframes propagate {
+      0% {
+        transform: translate3d(0, 0, 0);
+        fill: none;
+        /* Optional: animates the stroke color instead of fill */
+        stroke: #00ffcc; /* Cyan electric field color */
       }
-  
-      /* Base path styling */
-      .wave-line > use {
-        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
+      50% {
+        transform: translate3d(-25%, 0, 0); 
+        fill: none;
+        stroke: rgba(0, 150, 255, 0.4); /* Blue magnetic field proxy */
       }
-  
-      /* Primary high-energy wave line */
-      .wave-line > use:nth-child(2) {
-        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
+      100% {
+        transform: translate3d(-50%, 0, 0); 
+        fill: none;
+        stroke: #00ffcc; /* Cyan electric field color */
       }
-  
-      /* Subdued tracking echo/offset to show phase or depth */
-      .wave-line > use:nth-child(1) {
-        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
-      }
-
-      @keyframes propagate {
-        0% {
-          transform: translate3d(0, 0, 0);
-          fill: rgba(255, 0, 0, .5); /* Crucial: removes the solid shape fill */
-        }
-        100% {
-          transform: translate3d(-50%, 0, 0); /* Perfectly shifts by exactly one wave period */
-          fill: rgba(255, 0, 0, .5); /* Crucial: removes the solid shape fill */
-        }
-      }
+    }
+    
 }
