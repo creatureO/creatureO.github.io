@@ -732,4 +732,15 @@ nav a {
       .wave-line > use:nth-child(1) {
         fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
       }
+
+      @keyframes propagate {
+        0% {
+          transform: translate3d(0, 0, 0);
+          fill: rgba(255, 0, 0, .5); /* Crucial: removes the solid shape fill */
+        }
+        100% {
+          transform: translate3d(-50%, 0, 0); /* Perfectly shifts by exactly one wave period */
+          fill: rgba(255, 0, 0, .5); /* Crucial: removes the solid shape fill */
+        }
+      }
 }
