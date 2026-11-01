@@ -181,7 +181,7 @@ section{
     transform-origin: right;
 }
 
-/* 1. Define the growing behavior */
+/* 1. Define the growing behavior (SPIDER-MAN) */
 @keyframes grow-on-scroll {
   from {
     transform: scale(0);
@@ -336,7 +336,7 @@ hr{
     perspective: 1000px; /* Gives 3D depth */
   }
 
-  .atom svg{
+  .pageTitle svg{
     display: none;
   }
   
@@ -660,8 +660,10 @@ nav a {
       width:40vw;
   }
 
-  .atom svg{
+  .pageTitle svg{
+    position:absolute;
     display: block;
+    pointer-events: none;
     max-width: 10vw;
     padding-top: 1vw;
   }
@@ -696,7 +698,7 @@ nav a {
         will-change: transform; 
     }
     
-    /* 1. Define the growing behavior */
+    /* 1. Define the growing behavior (SPIDER-MAN)*/
     @keyframes grow-on-scroll {
       from {
         transform: scale(0);
@@ -707,4 +709,9 @@ nav a {
         opacity: 1;
       }
     }
+
+      /* Wave styling on phone*/
+      .wave-line > use {
+        fill: rgba(0, 255, 0, 0); /* Crucial: removes the solid shape fill */
+      }
 }

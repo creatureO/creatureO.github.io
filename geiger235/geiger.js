@@ -90,9 +90,9 @@ centerDot.addEventListener('mouseleave', () => {
 });
 
 //VIBRATING TITLE
-const textElement = document.querySelector('.vibrate-text');
+/*  const textElement = document.querySelector('.vibrate-text');
 const text = textElement.textContent;
 textElement.innerHTML = text
   .split('')
   .map(char => char === ' ' ? ' ' : `<span>${char}</span>`)
-  .join('');
+  .join('');    */
