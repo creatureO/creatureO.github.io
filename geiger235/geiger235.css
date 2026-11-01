@@ -414,6 +414,7 @@ hr{
     100% { transform: rotateX(30deg) rotateY(60deg) rotateZ(360deg); }
   }
 
+  /* animation to make electrons face viewer constantly*/
   @keyframes faceCamera-1 {
     0% { transform: rotateX(100deg) rotateY(60deg); }
     50% { transform: rotateX(100deg) rotateY(-180deg); }
@@ -444,7 +445,7 @@ hr{
         z-index: 5;
       }
   
-      /* Target the SVG wrapper */
+      /* Wave */
       .em-wave {
         position: absolute;
         left: 0;
@@ -710,8 +711,25 @@ nav a {
       }
     }
 
-      /* Wave styling on phone*/
+
+
+      /* WAVE */
+      .em-wave {
+        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
+      }
+  
+      /* Base path styling */
       .wave-line > use {
-        fill: rgba(0, 255, 0, 0); /* Crucial: removes the solid shape fill */
+        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
+      }
+  
+      /* Primary high-energy wave line */
+      .wave-line > use:nth-child(2) {
+        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
+      }
+  
+      /* Subdued tracking echo/offset to show phase or depth */
+      .wave-line > use:nth-child(1) {
+        fill: rgba(0, 255, 0, .5); /* Crucial: removes the solid shape fill */
       }
 }
