@@ -16,10 +16,10 @@ body{
 a{
     font-size: 1.25em;
     text-decoration: none;
-    color:currentColor;
+    color:white;
 
     padding:0.25vw 1vw;
-    background-color:rgba(33, 86, 165, 0.25);
+    background-color:rgba(33, 86, 165, 0.4);
     border-radius: 1vw;
     width:100%;
 }
@@ -29,6 +29,60 @@ a:hover{
     background-color:#ffff;
 
 }
+/* ======== DIALOG ======= */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 0px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the modal backdrop (the faded background area) */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Layout inside the dialog */
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border:none;
+}
+
+.dialog-content img {
+  height: auto;
+  border-radius: 8px;
+  border:none;
+  background-color: grey;
+  width:50vw;
+}
+
+.close-btn {
+  position:fixed;
+  top:5vw;
+  left: 5vw;
+  font-size: 2em;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #000;
+  color: #ffdc00;
+  border-radius: 4px;
+  transition:background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
+}
+
+.close-btn:hover {
+  font-size: 1em;
+  padding: 20px 34px;
+  background-color: #ffdc00;
+  color: #000;
+}
+
 
 /* ==============================HEADER ITEMS============================== */
 .phoneNavButton{
@@ -69,6 +123,11 @@ svg path:hover{
 header svg:hover{
     max-width:25vw;
     fill:white;
+}
+
+header svg.hovered{
+  max-width:25vw;
+  fill:white;
 }
 
 svg text{
@@ -124,21 +183,30 @@ main{
 }
 
 h1{
-    font-size: 5em;
     font-family: 'Science Gothic', sans-serif;
     letter-spacing: 0.05em;
     color:white;
 }
 
 section:first-child h1{
-    margin:0px;
+    font-size: 5vw;
+    display:flex;
+    padding-top: 2vw;
+    margin:0px 2.5vw;
+    justify-content: center;
+    align-items: start;
+    white-space: nowrap;
+}
+
+.titleCluster{
+  display:block;
 }
 
 
 .firstSection{
-    background-color: #ffdc00;
-    height:100vh;
-    padding:3vh 2vw 25vh 2vw;
+    height:50vh;
+    padding:3vh 2vw 10vh 2vw;
+    justify-content: start;
 }
 
 section{
@@ -217,7 +285,7 @@ section p{
     color:white;
     font-size:1.5em;
     line-height: 1.5em;
-    max-width:20vw;
+    max-width:30vw; /* makes size of text box bigger */
     padding:1vh 3vw;
     margin:0px;
 }
@@ -234,26 +302,42 @@ section p strong{
 
 .quote{
     display: block;
-    width: 70%;
+    width: 90%;
     padding:1vw;
     border-radius: 2.5vw;
-    background-color:rgba(200, 173, 0, 0.25);
-}
+    background-color: rgba(33, 86, 165, 0.25)
+  }
 
 .imageArea{
-    width: 25vw;
-    padding:1vh 2vw;
-    display:flex;
-    flex-direction: column;
-    gap:5vh;
+  width: 30vw; /* makes size of images box bigger */
+  padding:1vh 2vw;
+  display:flex;
+  flex-direction: column;
+  gap:5vh;
 }
 
-.imageArea img{
-    border-radius: 2.5vw;
-    object-fit: contain; 
-    max-height: 100%; 
-    border:none; 
-    outline:none;
+figure{
+  padding:0px;
+  margin:0px;
+  width:100%;
+  overflow:hidden;
+  border:none;
+}
+
+figure img{
+  object-fit: contain; 
+  max-height: 100%; 
+  width:100%;
+  border:none; 
+  outline:none;
+  border-radius: 2.5vw;
+}
+
+figcaption{
+  padding:2vh;
+  margin:0px;
+  border-radius: 2.5vw;
+  border:solid 1px white;
 }
 
 .imageArea p{
@@ -270,6 +354,10 @@ section p strong{
     letter-spacing: 0.05em;
 }
 
+.elementCard h3{
+  font-size: 2vw;
+}
+
 hr{
     border: none;
     height: 1px; /* Adjust thickness as needed */
@@ -282,13 +370,12 @@ hr{
 
 .pageTitle{
     display:flex;
-    width:100vw;
-    height:50vh;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .vibrate-text span {
+    font-size:3vw;
     padding:0.15vw;
     background-image: radial-gradient(rgb(165, 255, 204)50%, lime 100%);
     border-radius: 5vw;
@@ -328,16 +415,13 @@ hr{
   /* Base Atom Container */
   .atom {
     position: relative;
-    width: 40vw;
-    height: 40vw;
+    width: 10vw;
+    height: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
     perspective: 1000px; /* Gives 3D depth */
-  }
-
-  .pageTitle svg{
-    display: none;
+    margin-left:15vw;
   }
   
   /* The Central Nucleus */
@@ -374,10 +458,10 @@ hr{
   /* The Electrons */
   .electron {
     position: absolute;
-    top: 20vw;
-    left: 40vw;
-    width: 2vw;
-    height: 2vw;
+    top: 5vw;
+    left: 10vw;
+    width: 1vw;
+    height: 1vw;
     background-color: #000;
     border-radius: 50%;
     transform: translateX(-50%);
@@ -493,7 +577,13 @@ hr{
   /*=================================================================*/
 
 @media screen and (max-width: 900px){
-    header svg{
+/* ======== DIALOG ======= */
+.dialog-content img {
+  width:90vw;
+}
+
+/* ==============================HEADER ITEMS============================== */
+header svg{
         display:none;
     }
 
@@ -507,10 +597,10 @@ hr{
 
     .electron {
         position: absolute;
-        top: 5vw;
-        left: 2vw;
-        width: 3vw;
-        height: 3vw;
+        top: 1.5vw;
+        left: 0.5vw;
+        width: 2vw;
+        height: 2vw;
         background-color: #000;
         border-radius: 50%;
         transform: translateX(-50%);
@@ -609,17 +699,21 @@ nav a {
 
 
     .pageTitle{
-        max-width: 95vw;
+        max-width: 85vw;
         display:flex;
         width:100vw;
         height:10vh;
-        padding-top: 30vh;
+        padding-top: 40vw;
         justify-content: center;
         align-items: center;
     }
 
     h1{
         font-size: 3em;
+    }
+
+    .vibrate-text span {
+      font-size:5vh;
     }
 
     section{
@@ -650,23 +744,24 @@ nav a {
     }
 
     .imageArea{
-      width: 80vw;
+      width: 90vw;
       padding:1vh 2vw;
       display:grid;
       grid-template-columns: repeat(2, 1fr); 
+      place-items: center; 
       gap:2.5vh;
   }
-  
-  .imageArea img{
-      width:40vw;
+
+  figcaption{
+    padding: 0.5vh;
+    max-height:5em;
+    overflow-y: auto;
   }
 
-  .pageTitle svg{
-    position:absolute;
-    display: block;
-    pointer-events: none;
-    max-width: 10vw;
-    padding-top: 1vw;
+  .atom {
+    width: 20vw;
+    height: 20vw;
+    top: -10vh;
   }
 
     .quote{
@@ -674,8 +769,8 @@ nav a {
         width: 100%;
         padding:1vw;
         border-radius: 2.5vw;
-        background-color:rgba(200, 173, 0, 0.25);
-    }
+        background-color: rgba(33, 86, 165, 0.25)
+      }
 
     .phoneHomeRadSymbol{
         display:block;

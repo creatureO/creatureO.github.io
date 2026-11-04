@@ -3,30 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>geiger235</title>
+  <title>Geiger World</title>
   <link rel="icon" type="image/svg+xml" href="homePageIcons/geiger235Logo.svg" sizes="any">
   <link rel="stylesheet" type="text/css" href="geiger235.css">
   <script src="geiger.js" defer></script>
   <style>
-    h1{
-        font-size: 3em;
-    }
 
-    .pageTitle{
-    position:absolute;
-    top:-2.5vw; left:0px;
-    display:flex;
-    width:100vw;
-    height:100vh;
-    justify-content: center;
-    align-items: center;
-    }
-
-@media screen and (max-width: 900px){
-    .pageTitle{
-    height:50vh;
-}
-}
+  .firstSection{
+    background-color: #ffdc00;
+  }
   </style>
 
 </head>
@@ -46,6 +31,14 @@
         </nav>
     </aside>
 </div>
+
+<dialog id="imageDialog">
+  <div class="dialog-content">
+    <img src="./homePageIcons/popCultureLogo.svg" alt="Expanded landscape">
+    <!-- <p>Radiation is Rad</p> -->
+    <button class="close-btn" id="closeDialogBtn">Close</button>
+  </div>
+</dialog>
 
 <header>
     <audio id="sound" controls loop style="position:fixed; top:0px; left:-9999px;">
@@ -128,80 +121,70 @@
     </svg>
 </header>
 <main>
-<div class="pageTitle">
-  <svg id="radSymbol" data-name="rad symbol glowing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" class="phoneHomeRadSymbol">
-    <defs>
-
-      <style>
-        .cls-1 {
-          fill: #ffdc00;
-        }
-      </style>
-    </defs>
-    <circle id="new_circle" data-name="new circle" class="cls-1" cx="398.59" cy="400" r="360"/>
-    <g>
-      <g>
-        <g id="new_circle-3" data-name="new circle">
-          <a href="./"> <circle id="centerDot" cx="399.98" cy="401.16" r="81.81"/> </a> <!--CENTER DOT-->
-        </g>
-        <g><!--PATHS ARE WINGS-->
-         <path d="M505.75,397.86h224.91c-1.17-119.84-66.08-224.43-162.47-281.49l-112.47,194.83c29.18,18.12,48.9,50.05,50.02,86.66Z" class="wing"/>
-         <path d="M399.98,506.99c-18.1,0-35.13-4.55-50.03-12.55l-112.47,194.82c47.99,27.13,103.44,42.62,162.5,42.62s114.51-15.49,162.51-42.62l-112.48-194.81c-14.9,8.01-31.93,12.56-50.03,12.56Z" class="wing"/>
-         <path d="M344.22,311.21l-112.48-194.82c-96.37,57.05-161.28,161.64-162.45,281.47h224.91c1.12-36.6,20.84-68.52,50.01-86.65Z" class="wing"/>
-        </g>
-      </g>
-    </g>
-
-  </svg>
-        <div class="atom">
-            <div class="nucleus"></div>
-            <!-- Orbit 1 -->
-            <div class="orbit orbit-1">
-              <div class="electron" id="electron1"></div>
-            </div>
-            
-            <!-- Orbit 2 -->
-            <div class="orbit orbit-2">
-              <div class="electron" id="electron2"></div>
-            </div>
-            
-            <!-- Orbit 3 -->
-            <div class="orbit orbit-3">
-              <div class="electron" id="electron3"></div>
-            </div>
-          </div>
-</div>
 <section class="firstSection">
-    <h1>geiger235</h1>
+  <div class="pageTitle">
+      <div class="atom">
+              <div class="nucleus"></div>
+              <!-- Orbit 1 -->
+              <div class="orbit orbit-1">
+                <div class="electron" id="electron1"></div>
+              </div>
+              
+              <!-- Orbit 2 -->
+              <div class="orbit orbit-2">
+                <div class="electron" id="electron2"></div>
+              </div>
+              
+              <!-- Orbit 3 -->
+              <div class="orbit orbit-3">
+                <div class="electron" id="electron3"></div>
+              </div>
+            </div>
+  </div>
 
-
+  <h1>Geiger World</h1>
 </section>
 
-<section class="firstSection" style="height:fit-content">
+<section style="height:fit-content; background-color: #ffdc00;">
 <div class="textArea"><!-- TEXT -->
     <h2 style="color:black;">RADIATION</h2>
-    <p style="color:black;">It’s a beautiful creation of God. Given the right use,
-     it can produce wonderful results, yet due to pollution
-     and violence, it’s got a bad wrap. Let’s clear up some
-    misconceptions.</p>
+    <p style="color:black;">Geiger World is an indie-online effort to 
+      document and exposit the wonders of Radiation, as a scientific 
+      phenomenon and element of our culture. 
+      <br><br>
+      Radiation and radioactive technology is often mistaken by the 
+      layman's world as dangerous and to be feeared. This website is 
+      here to dispell those worries, and reframe the perception of 
+      this wonderful scientific miracle.
+      <br><br>
+    It’s a beautiful creation of God. Given the right use,
+     it can manifest productive results, yet due to pollution
+     and violence, it’s got a bad wrap.</p>
 </div>
 <div class="imageArea"><!-- IMAGES -->
-    <img class="lobbySlide" src="./science/radiationScience2.webp"/>
-    <p style="color:black;">Power plant diagram</p>
+  <figure>
+    <img src="https://i.pinimg.com/originals/5f/47/8b/5f478b111a96798c8588c5922f2206ff.gif" class="triggerImg"/>
+    <figcaption style="border-color: black;"><p style="color:black;">In a poll conducted by The Economist and YouGov, 47% of Americans did not belive in the 
+      saftey of nulcear power, most likley due to high profie accidents like Fukashima and Chernobyl.</p></figcaption>
+  </figure>
 </div>
     
 </section>
 
-<section class="firstSection" style="height:fit-content">
+<section style="height:fit-content; background-color: #ffdc00;">
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./science/radiationScience3.webp"/>
-        <p style="color:black;">Power plant blueprint</p>
+      <figure>
+        <img src="./science/radiationScience3.webp" class="triggerImg"/>
+        <figcaption style="border-color: black;"><p style="color:black;">Nuclear energy generates ~9% of the world's 
+          electricity. There are ~440 power reactors. This is almost 20% 
+          of the world’s low-carbon electricity.</p></figcaption>
+      </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2 style="color:black;">WHAT IS IT?</h2>
         <p style="color:black;">Radiation is: 
             <br><br>
-            <span class="quote">
+            <span class="quote" style="background-color:rgba(200, 173, 0, 0.25);">
             <em>“Radiation is energy that 
             moves from one place to 
             another in a form that can 
@@ -225,15 +208,24 @@
             </p>
     </div>  
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./science/radiationScience13.webp"/>
-        <p>Power plant's clean energy</p>    
+      <figure>
+        <img src="./science/radiationScience13.webp" class="triggerImg"/>
+        <figcaption><p>Power plant's clean energy</p></figcaption>
+      </figure>
+
+      <figure>
+        <img src="./science/radiationScience2.webp" class="triggerImg"/>
+        <figcaption><p>Despite popular beliefe, it is only clean steam that is expelled from the tops of the chimnneys</p></figcaption>
+      </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./science/radiationScience14.webp"/>
-        <p>X-ray scanning</p>        
+      <figure>
+        <img src="./science/radiationScience14.webp" class="triggerImg"/>
+        <figcaption><p>X-ray scanning</p></figcaption>
+      </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>BOTTOM LINE...</h2>
@@ -257,12 +249,14 @@
             Look around and see the wonders!</p>
     </div>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./popCulture/fallout6.webp" style="width:50%;"/>
-        <p>Fallout: A Post Nuclear Role Playing Game</p>        
+      <figure>
+        <img src="./popCulture/fallout6.webp" style="width:50%;" class="triggerImg"/>
+        <figcaption><p>Fallout: A Post Nuclear Role Playing Game</p></figcaption>
+      </figure>  
     </div>
 </section>
 
-<section style="height:50vw"></section><!-- BLACK BUFFER -->
+<section style="height:50vw" id="page-bottom-marker"></section><!-- BLACK BUFFER -->
 </main>
 
 </body>

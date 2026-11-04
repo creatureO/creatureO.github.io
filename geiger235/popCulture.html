@@ -3,19 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>geiger235 PopCulture</title>
+  <title>Geiger World PopCulture</title>
   <link rel="icon" type="image/svg+xml" href="homePageIcons/geiger235Logo.svg" sizes="any">
   <link rel="stylesheet" type="text/css" href="geiger235.css">
   <script src="geiger.js" defer></script>
   <style>
     .firstSection{
-    background-color: #fff;
+    background-color: #ff00f2;
     }
     .transitionPoint{
-    background-image: linear-gradient(to bottom, #fff 5%, #282828 60%,#000 100%);
-    }
-    .quote{
-    background-color:rgba(33, 86, 165, 0.25);
+    background-image: linear-gradient(to bottom, #ff00f2 5%, #282828 60%,#000 100%);
     }
 
     section audio{
@@ -23,10 +20,6 @@
       padding-left:20vw;
     }
 
-    section:first-child{
-      justify-content: center;
-      gap:2.5em;
-    }
     .vibrate-text span {
     padding:0.15vw;
     background-image: radial-gradient(rgb(255, 199, 240)50%, rgb(255, 0, 200) 100%);
@@ -88,6 +81,15 @@
         </nav>
     </aside>
 </div>
+
+<dialog id="imageDialog">
+  <div class="dialog-content">
+    <img src="./homePageIcons/popCultureLogo.svg" alt="Expanded landscape">
+    <!-- <p>Radiation is Rad</p> -->
+    <button class="close-btn" id="closeDialogBtn">Close</button>
+  </div>
+</dialog>
+
   <header>
     <audio id="sound" controls loop style="position:fixed; top:0px; left:-9999px;">
         <source src="homePageIcons/audio/geigerCounter.mp3" type="audio/mpeg" id="geigerCounter">
@@ -118,7 +120,7 @@
 
         <style>
           .cls-1 {
-            fill: #fff;
+            fill: #ff00f2;
           }
         </style>
       </defs>
@@ -171,14 +173,32 @@
 <main>
 <section class="firstSection">
   <div class="pageTitle">
+    <div class="atom">
+            <div class="nucleus"></div>
+            <!-- Orbit 1 -->
+            <div class="orbit orbit-1">
+              <div class="electron" id="electron1"></div>
+            </div>
+            
+            <!-- Orbit 2 -->
+            <div class="orbit orbit-2">
+              <div class="electron" id="electron2"></div>
+            </div>
+            
+            <!-- Orbit 3 -->
+            <div class="orbit orbit-3">
+              <div class="electron" id="electron3"></div>
+            </div>
+          </div>
+</div>
+
+<div class="titleCluster">
+<h1>Geiger World</h1>
+  <div class="pageTitle">
     <h1 class="vibrate-text">
-        <span>P</span><span>O</span><span>P</span>
+        <span>P</span><span>O</span><span>P</span><span>C</span><span>U</span><span>L</span><span>T</span><span>U</span><span>R</span><span>E</span>
     </h1>
 </div>
-<div class="pageTitle" style="color:white;">
-  <h1 class="vibrate-text">
-      <span>C</span><span>U</span><span>L</span><span>T</span><span>U</span><span>R</span><span>E</span>
-  </h1>
 </div>
 
 
@@ -192,19 +212,34 @@
         </p>
     </div>  
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./popCulture/Uranium1.webp"/>
-        <img class="lobbySlide" src="./popCulture/Uranium2.webp"/>
-        <p>Simpsons heavy use of novelizing radiation</p>
+      <figure>
+        <img src="./popCulture/Uranium1.webp" class="triggerImg"/>
+        <figcaption><p>In real life, uranium does not glow green</p></figcaption>
+      </figure>
+
+      <figure>
+        <img src="./popCulture/Uranium2.webp" class="triggerImg"/>
+        <figcaption><p>Simpsons heavy use of novelizing radiation</p></figcaption>
+      </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-      <img class="lobbySlide" src="./popCulture/superheroes5.webp"/>
-      <img class="lobbySlide" src="./popCulture/superheroes6.webp"/>
-      <p>The Incredible Hulk #1, 1962</p>
-      <img class="lobbySlide" src="./popCulture/superheroes4.webp"/>
-      <p>Amazing Fantasy #15, 1962</p>
+      <figure>
+        <img src="./popCulture/superheroes5.webp" class="triggerImg"/>
+        <figcaption><p>Despite what we know today, Hulk was originally grey due to his origins being from movie magic rather than Gamma radiation</p></figcaption>
+      </figure>
+
+      <figure>
+        <img src="./popCulture/superheroes6.webp" class="triggerImg"/>
+        <figcaption><p>The Incredible Hulk #1, 1962<br>Hulk's comics debut</p></figcaption>
+      </figure>
+
+      <figure>
+      <img src="./popCulture/superheroes4.webp" class="triggerImg"/>
+      <figcaption><p>Amazing Fantasy #15, 1962<br>Spidy's comics debut</p></figcaption>
+    </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>RAD ACTION</h2>
@@ -223,18 +258,23 @@
 </section>
 
 <section class="backgroundBasedImage">
-  <img src="./popCulture/superheroes3-1.webp">
+  <img src="./popCulture/superheroes3-1.webp" class="triggerImg">
   <img class="forgroundImage" src="./popCulture/superheroes3-2.webp">
 </section>
 
 <section>      
 <div class="imageArea"><!-- IMAGES -->
-  <img class="lobbySlide" src="./popCulture/superheroes1.webp"/>
-  <p>Doctor Solar</p>
+  <figure>
+    <img src="./popCulture/superheroes1.webp" class="triggerImg"/>
+    <figcaption><p>Doctor Solar</p></figcaption>
+  </figure>
 </div>
 <div class="imageArea"><!-- IMAGES -->
-  <img class="lobbySlide" src="./popCulture/superheroes2.webp"/>
-  <p>Doctor Manhattan</p>
+  <figure>
+    <img src="./popCulture/superheroes2.webp" class="triggerImg"/>
+    <figcaption><p>Doctor Manhattan</p></figcaption>
+  </figure>
+
 </div>
 </section>
 
@@ -251,15 +291,29 @@
         </p>
     </div>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./popCulture/godzilla4.webp"/>
-        <img class="lobbySlide" src="./popCulture/godzilla2.webp"/>
-        <img class="lobbySlide" src="./popCulture/godzilla1.webp"/>
-        <p>Godzilla was active since the 50s</p>
+      <figure>
+        <img src="./popCulture/godzilla4.webp" class="triggerImg"/>
+        <figcaption><p>Godzilla was a strange method of coping with the truama that the Fat-Man and Little-boy caused back in 1945</p></figcaption>
+      </figure>
+
+      <figure>
+        <img src="./popCulture/godzilla2.webp" class="triggerImg"/>
+        <figcaption><p>Modern itterations of Godzilla utilize gamma rays in his attacks like gigantic laser beams</p></figcaption>
+      </figure>
+    
+      <figure>
+        <img src="./popCulture/godzilla1.webp" class="triggerImg"/>
+        <figcaption><p>Godzilla was active since the 50s</p></figcaption>
+      </figure>
+
     </div>
 </section>
 
 <section class="backgroundBasedImage">
-  <img src="./popCulture/godzilla3.webp">
+<figure>
+  <img src="./popCulture/godzilla3.webp" class="triggerImg">
+  <figcaption></figcaption>
+</figure>
 </section>
 
 <section style="display:block;">
@@ -317,13 +371,38 @@
 
 <section>
   <div class="imageArea"><!-- IMAGES -->
-    <img class="lobbySlide" src="./popCulture/fallout1.webp"/>
-    <img class="lobbySlide" src="./popCulture/fallout2.webp"/>
-    <img class="lobbySlide" src="./popCulture/fallout3.webp"/>
-    <img class="lobbySlide" src="./popCulture/fallout4.webp"/>
-    <img class="lobbySlide" src="./popCulture/fallout5.webp"/>
-    <p>Fallout: A Post Nuclear Role Playing Game</p>  
-  </div>      
+  <figure>
+    <img src="./popCulture/fallout1.webp" class="triggerImg"/>
+    <figcaption><p>The Vault Boy is the quintessential mascot of the franchise since 1997</p></figcaption>
+  </figure>
+
+  <figure>
+    <img src="./popCulture/fallout2.webp" class="triggerImg"/>
+    <figcaption><p>Fallout 1 was a pioneer in combining DND style mechanics with single player science fiction mechanics</p></figcaption>
+  </figure>
+
+  <figure>
+    <img src="./popCulture/fallout3.webp" class="triggerImg"/>
+    <figcaption><p>Fallout carries heavy themes about the unchanging morality of war and mankind's addiction to forming factions</p></figcaption>
+  </figure>
+
+  <figure> <!-- Nuka Cola-->
+    <img src="./popCulture/fallout4.webp" class="triggerImg"/>
+    <figcaption><p>Items in the Fallout universe center their graphic design around 1950s nuclear age aesthetics for both nostalgia and futurism</p></figcaption>
+  </figure>
+    
+  <figure>
+    <img src="./popCulture/fallout5.webp" class="triggerImg"/>
+    <figcaption><p>Fallout is full of mutated monsters and enemies, including super mutants, raiders, and fascists</p></figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://media.tenor.com/9jQh0Cnvz_AAAAAM/vats-fallout.gif" class="triggerImg"/>
+    <figcaption><p>Fallout combat utilizes 1950s computer system interfaces to simulate old naval war-time computer game interfaces</p></figcaption>
+  </figure>
+  </div> 
+
+
   <div class="textArea"><!-- TEXT -->
       <h2>RAD GAMES</h2>
       <p>
@@ -343,7 +422,7 @@
 </iframe>
 </div>
 
-<section style="height:50vw"></section><!-- BLACK BUFFER -->
+<section style="height:50vw" id="page-bottom-marker"></section><!-- BLACK BUFFER -->
 </main>
 
 </body>

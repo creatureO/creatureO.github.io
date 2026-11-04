@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>geiger235 History</title>
+  <title>Geiger World History</title>
   <link rel="icon" type="image/svg+xml" href="homePageIcons/geiger235Logo.svg" sizes="any">
   <link rel="stylesheet" type="text/css" href="geiger235.css">
   <script src="geiger.js" defer></script>
@@ -11,11 +11,9 @@
     .firstSection{
     background-color: #527BB5;
     }
+
     .transitionPoint{
     background-image: linear-gradient(to bottom, #527BB5 5%, #3b5a85 60%,#000 100%);
-    }
-    .quote{
-    background-color:rgba(33, 86, 165, 0.25);
     }
 
     .vibrate-text span {
@@ -43,6 +41,15 @@
             </nav>
         </aside>
     </div>
+
+    <dialog id="imageDialog">
+        <div class="dialog-content">
+          <img src="./homePageIcons/popCultureLogo.svg" alt="Expanded landscape">
+          <!-- <p>Radiation is Rad</p> -->
+          <button class="close-btn" id="closeDialogBtn">Close</button>
+        </div>
+    </dialog>
+    
     <header>
         <audio id="sound" controls loop style="position:fixed; top:0px; left:-9999px;">
             <source src="homePageIcons/audio/geigerCounter.mp3" type="audio/mpeg" id="geigerCounter">
@@ -126,10 +133,33 @@
 <main>
 <section class="firstSection">
     <div class="pageTitle">
+        <div class="atom">
+                <div class="nucleus"></div>
+                <!-- Orbit 1 -->
+                <div class="orbit orbit-1">
+                  <div class="electron" id="electron1"></div>
+                </div>
+                
+                <!-- Orbit 2 -->
+                <div class="orbit orbit-2">
+                  <div class="electron" id="electron2"></div>
+                </div>
+                
+                <!-- Orbit 3 -->
+                <div class="orbit orbit-3">
+                  <div class="electron" id="electron3"></div>
+                </div>
+              </div>
+    </div>
+    <div class="titleCluster">
+    <h1>Geiger World</h1>
+    <div class="pageTitle">
         <h1 class="vibrate-text" style="font-family:'Times New Roman', Times, serif;">
             <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>Y</span><span></span><span></span>
         </h1>
     </div>
+    </div>
+
 </section>
 
 <section class="transitionPoint">
@@ -142,15 +172,19 @@
         </p>
     </div>  
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./history/radiationHistory1.webp"/>
-        <p>Bannanas contain more radiation than most foods</p>
+        <figure>
+        <img src="./history/radiationHistory1.webp" class="triggerImg"/>
+        <figcaption><p>Bannanas contain more radiation than most foods</p></figcaption>
+        </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./history/radiationHistory2.webp"/>
-        <p>X-ray historical landmark</p>
+        <figure>
+        <img src="./history/radiationHistory2.webp" class="triggerImg"/>
+        <figcaption><p>X-ray historical landmark</p></figcaption>
+        </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>SEEN</h2>
@@ -174,17 +208,24 @@
         </p>
     </div>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./history/radiationHistory3.webp"/>
-        <p>Madam Curie working in her lab</p>    
+        <figure>
+        <img src="./history/radiationHistory3.webp" class="triggerImg"/>
+        <figcaption><p>Madam Curie working in her lab</p></figcaption>
+        </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./history/radiationHistory4.webp"/>
-        <p>Radium girls</p>
-        <img class="lobbySlide" src="https://media.cnn.com/api/v1/images/stellar/prod/171208172124-radithor-water-bottle.jpg?q=w_2310,h_3076,x_0,y_0,c_fill"/>
-        <p>Radium beauty products</p>
+        <figure>
+            <img src="./history/radiationHistory4.webp" class="triggerImg"/>
+            <figcaption><p>Radium girls</p></figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/171208172124-radithor-water-bottle.jpg?q=w_2310,h_3076,x_0,y_0,c_fill" class="triggerImg"/>
+            <figcaption><p>Radium beauty products</p></figcaption>
+        </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>RAD AGE BEGINS</h2>
@@ -210,17 +251,24 @@
         </p>
     </div>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./history/radiationHistory5.webp"/>
-        <p>Hiroshima and Nagasaki experienced similar levels of bombs</p>        
+        <figure>
+        <img src="./history/radiationHistory5.webp" class="triggerImg"/>
+        <figcaption><p>Hiroshima and Nagasaki experienced similar levels of bombs</p></figcaption>
+        </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./history/radiationHistory6.webp"/>
-        <p>USSR in the Cold War Arms Race against the United States of America</p>
-        <img class="lobbySlide" src="https://multimedialearningllc.wordpress.com/wp-content/uploads/2010/05/cold-war.gif"/>
-        <p>Arms Race political cartoon</p>             
+        <figure>
+            <img src="./history/radiationHistory6.webp" class="triggerImg"/>
+            <figcaption><p>USSR in the Cold War Arms Race against the United States of America</p></figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://multimedialearningllc.wordpress.com/wp-content/uploads/2010/05/cold-war.gif" class="triggerImg"/>
+            <figcaption><p>Arms Race political cartoon</p></figcaption>
+        </figure>          
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>I DON’T WANT TO SET THE WORLD ON FIRE</h2>
@@ -236,7 +284,7 @@
     </div>  
 </section>
 
-<section style="height:50vw"></section><!-- BLACK BUFFER -->
+<section style="height:50vw" id="page-bottom-marker"></section><!-- BLACK BUFFER -->
 </main>
 
 </body>

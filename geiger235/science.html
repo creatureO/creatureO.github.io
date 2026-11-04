@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>geiger235 Science</title>
+  <title>Geiger World Science</title>
   <link rel="icon" type="image/svg+xml" href="homePageIcons/geiger235Logo.svg" sizes="any">
   <link rel="stylesheet" type="text/css" href="geiger235.css">
   <script src="geiger.js" defer></script>
@@ -14,14 +14,12 @@
     .transitionPoint{
     background-image: linear-gradient(to bottom, #94D7B6 5%, #65967d 60%,#000 100%);
     }
-    .quote{
-    background-color:rgba(33, 86, 165, 0.25);
-    }
 
     a{
        color:aqua;
        line-height: 1.5em;
         display:block;
+        margin-top:10px;
     }
 
     iframe{
@@ -48,6 +46,15 @@
             </nav>
         </aside>
     </div>
+
+    <dialog id="imageDialog">
+        <div class="dialog-content">
+          <img src="./homePageIcons/popCultureLogo.svg" alt="Expanded landscape">
+          <!-- <p>Radiation is Rad</p> -->
+          <button class="close-btn" id="closeDialogBtn">Close</button>
+        </div>
+    </dialog>
+
     <header>
         <audio id="sound" controls loop style="position:fixed; top:0px; left:-9999px;">
             <source src="homePageIcons/audio/geigerCounter.mp3" type="audio/mpeg" id="geigerCounter">
@@ -130,11 +137,31 @@
     </header>
 <main>
 <section class="firstSection">
-<div class="pageTitle">
-    <h1 class="vibrate-text" style="font-family:'Times New Roman', Times, serif;">
+    <div class="pageTitle">
+          <div class="atom">
+                  <div class="nucleus"></div>
+                  <!-- Orbit 1 -->
+                  <div class="orbit orbit-1">
+                    <div class="electron" id="electron1"></div>
+                  </div>
+                  
+                  <!-- Orbit 2 -->
+                  <div class="orbit orbit-2">
+                    <div class="electron" id="electron2"></div>
+                  </div>
+                  
+                  <!-- Orbit 3 -->
+                  <div class="orbit orbit-3">
+                    <div class="electron" id="electron3"></div>
+                  </div>
+                </div>
+      </div>
+      <div class="titleCluster">
+      <h1>Geiger World</h1>
+      <h1 class="vibrate-text" style="font-family:'Times New Roman', Times, serif;">
         <span>S</span><span>C</span><span>I</span><span>E</span><span>N</span><span>C</span><span>E</span><span></span><span></span>
     </h1>
-</div>
+        </div>
 </section>
 
 <section class="transitionPoint">
@@ -155,22 +182,30 @@
         </p>
     </div>  
     <div class="imageArea"><!-- IMAGES -->
+    <figure>
         <div class="elementCard">
             <h3>1</h3>
-            <h1 style="display:flex; justify-content: center; font-size:10em; margin:0px;">H</h1>
+            <h1 style="display:flex; justify-content: center; font-size:10vw; margin:0px;">H</h1>
             <h3>Hydrogen<br>1.008</h3>
         </div>
-        <p>Hydrogen element</p>
-        <img class="lobbySlide" src="./science/radiationScience7.webp" />
-        <p>Theorized graphic of the Big Bang</p>
+        <figcaption><p>Hydrogen element</p></figcaption>
+    </figure>
+
+    <figure>
+        <img src="./science/radiationScience7.webp"  class="triggerImg"/>
+        <figcaption><p>Theorized graphic of the Big Bang</p></figcaption>
+    </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./science/radiationScience11.webp"/>
-        <p>Atomic diagram</p>
-    </div>      
+    <figure>
+        <img src="./science/radiationScience11.webp" class="triggerImg"/>
+        <figcaption><p>Atomic diagram</p></figcaption>
+    </figure>    
+    </div>    
+
     <div class="textArea"><!-- TEXT -->
         <h2>ATOMS</h2>
         <p>
@@ -222,16 +257,24 @@
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
+        <figure>
         <div class="elementCard">
             <h3>92</h3>
-            <h1 style="display:flex; justify-content: center; font-size:10em; margin:0px;">U</h1>
+            <h1 style="display:flex; justify-content: center; font-size:10vw; margin:0px;">U</h1>
             <h3>Uranium<br>238.03</h3>
         </div>
-        <p>Uranium element</p>
-        <img class="lobbySlide" src="./science/radiationScience8.webp"/>
-        <p>Uranium ore</p>
-        <img class="lobbySlide" src="./science/radiationScience10.webp"/>
-        <p>Geiger counter</p><br>
+        <figcaption><p>Uranium element</p></figcaption>
+        </figure>
+
+        <figure>
+            <img src="./science/radiationScience8.webp" class="triggerImg"/>
+            <figcaption><p>Uranium ore</p></figcaption>
+        </figure>
+
+        <figure>
+            <img src="./science/radiationScience10.webp" class="triggerImg"/>
+            <figcaption><p>Geiger counter</p><br></figcaption>
+        </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>NOT TOO COMPLICATED</h2>
@@ -268,25 +311,44 @@
         </p>
     </div>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./science/radiationScience1.webp"/>
-        <p>Fission view</p>
-        <img class="lobbySlide" src="./science/radiationScience4.webp"/>
-        <p>Fission reactors</p>
-        <img class="lobbySlide" src="./science/radiationScience9.webp"/>
-        <p>Uranium reactor rods</p>
+    <figure>
+        <img src="./science/radiationScience1.webp" class="triggerImg"/>
+        <figcaption><p>Fission view</p></figcaption>
+    </figure>
+
+    <figure>
+        <img src="./science/radiationScience4.webp" class="triggerImg"/>
+        <figcaption><p>Fission reactors</p></figcaption>
+    </figure>
+
+    <figure>
+        <img src="./science/radiationScience9.webp" class="triggerImg"/>
+        <figcaption><p>Uranium reactor rods</p></figcaption>
+    </figure>
     </div>
 </section>
 
 <section>
     <div class="imageArea"><!-- IMAGES -->
-        <img class="lobbySlide" src="./science/radiationScience5.webp"/>
-        <p>Atomic Bomb (model Fat-Man/Little Boy 1945)</p>
-        <img class="lobbySlide" src="./science/radiationScience6.webp"/>
-        <p>Atomic Bomb energy core</p>
-        <img class="lobbySlide" src="https://cdn.sanity.io/images/2qh99brn/production/4bc77316c2c97be8dbb1cc0d8d4711a170dbf66a-4000x2250.jpg?w=1440&auto=format&q=90"/>
-        <p>Total nuclear wasteland</p>
-        <img class="lobbySlide" src="./science/radiationScience12.webp"/>
-        <p>Protests against the nukes</p>
+    <figure>
+        <img src="./science/radiationScience5.webp" class="triggerImg"/>
+        <figcaption><p>Atomic Bomb (model Fat-Man/Little Boy 1945)</p></figcaption>
+    </figure>
+
+    <figure>
+        <img src="./science/radiationScience6.webp" class="triggerImg"/>
+        <figcaption><p>Atomic Bomb energy core</p></figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://cdn.sanity.io/images/2qh99brn/production/4bc77316c2c97be8dbb1cc0d8d4711a170dbf66a-4000x2250.jpg?w=1440&auto=format&q=90" class="triggerImg"/>
+        <figcaption><p>Total nuclear wasteland</p></figcaption>
+    </figure>
+
+    <figure>
+        <img src="./science/radiationScience12.webp" class="triggerImg"/>
+        <figcaption><p>Protests against the nukes</p></figcaption>
+    </figure>
     </div>      
     <div class="textArea"><!-- TEXT -->
         <h2>ATOM BOMBS</h2>
@@ -305,35 +367,52 @@
 </section>
 
 <section class="backgroundBasedImage">
-    <img src="./homePageIcons/simpleABomb2.webp">
+    <img src="./homePageIcons/simpleABomb2.webp" class="triggerImg">
 </section>
 
 <section>
     <div class="textArea"><!-- TEXT -->
         <h2>MORE</h2>
         <p>
-            <a href="https://unitednuclear.com/" target="_blank" style="font-size: 2em;">United Nuclear</a><br>
-            United Nuclear is a retail based site, distributing radiation based recources for curious and professional minds to obtain, ranging from merchandise to scientific equipment. <br><br><br>
-            <a href="https://www.iaea.org/newscenter/news/what-is-radiation" target="_blank" style="font-size: 2em;">IAEA</a><br>
-            The International Atomic Energy Agency is the world's central intergovernmental forum for scientific and technical cooperation in the nuclear field. It works for the safe, secure and peaceful uses of nuclear science and technology. <br><br><br>
-            <a href="https://www.cdc.gov/radiation-emergencies/hcp/isotopes/uranium-235-238.html" target="_blank" style="font-size: 2em;">CDC</a><br>
-            The Center for Disease Control offers online recources do document, explain and list pripority steps in radiation saftey in the danger cases of uranium and fallout. <br><br><br>
-            <a href="https://www.icrp.org/" target="_blank" style="font-size: 2em;">ICRP</a><br>
-            The International Comission on Radiological Protection documents recommendations and advice as papers in various scientific journals in the fields of medicine and physics. <br><br><br>
-            <a href="https://www.atomicmuseum.vegas/visit/" target="_blank" style="font-size: 2em;">Atomic Museum</a><br>
-            The National Atomic Testing Museum is a repository for one of the most comprehensive collections of nuclear history. The museum covers the period from the nation’s first nuclear test, code-named Trinity, to the first test at the Nevada Test Site in 1951, to the today's late nuclear age.<br><br><br>
+        There are plenty of other online sources you can go and visit to learn about and even interact with the atomic energy community. Atomic recources, power and science are all available for the everyday person to look through.
         </p>
     </div>
     <div class="imageArea"><!-- IMAGES -->
-        <iframe src="https://unitednuclear.com/" title="Description of the content"></iframe>
-        <iframe src="https://www.iaea.org/themes/custom/iaea_2025/build/assets/images/logo.svg" title="Description of the content"></iframe>
-        <iframe src="https://www.cdc.gov/radiation-emergencies/hcp/isotopes/uranium-235-238.html" title="Description of the content"></iframe>
-        <iframe src="https://www.icrp.org/" title="Description of the content"></iframe>
-        <iframe src="https://www.atomicmuseum.vegas/visit/" title="Description of the content"></iframe>
+    
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GeMjQSMoyyoPrkYL0J6wJ4ucPJC8_Nl9Y_-EDCQGozL3iFsRuWQwmRg&s=10" alt="united nuclear" class="triggerImg">
+        <figcaption><p>United Nuclear is a retail based site, distributing radiation based recources for curious and professional minds to obtain, ranging from merchandise to scientific equipment.</p></figcaption>
+        <a href="https://unitednuclear.com/" target="_blank" style="font-size: 2em; width:50%;">Link</a><br>
+    </figure>
+    
+    <figure>
+        <img src="https://www.iaea.org/themes/custom/iaea_2025/build/assets/images/logo.svg" alt="IAEA" class="triggerImg">
+        <figcaption><p>The International Atomic Energy Agency is the world's central intergovernmental forum for scientific and technical cooperation in the nuclear field. It works for the safe, secure and peaceful uses of nuclear science and technology.</p></figcaption>
+        <a href="https://www.iaea.org/newscenter/news/what-is-radiation" target="_blank" style="font-size: 2em; width:50%;">Link</a><br>
+    </figure>
+    
+    <figure>
+        <img src="https://www.cdc.gov/TemplatePackage/5.0/img/logo/logo-notext.svg" alt="CDC" class="triggerImg">
+        <figcaption><p>The Center for Disease Control offers online recources do document, explain and list pripority steps in radiation saftey in the danger cases of uranium and fallout.</p></figcaption>
+        <a href="https://www.cdc.gov/radiation-emergencies/hcp/isotopes/uranium-235-238.html" target="_blank" style="font-size: 2em; width:50%;">Link</a><br>
+    </figure>
+    
+    <figure>
+        <img src="https://www.icrp.org/img/icrp%20logo%20white%20small.png" alt="ICRP" class="triggerImg">
+        <figcaption><p>The International Comission on Radiological Protection documents recommendations and advice as papers in various scientific journals in the fields of medicine and physics.</p></figcaption>
+        <a href="https://www.icrp.org/" target="_blank" style="font-size: 2em; width:50%;">Link</a><br>
+    </figure>
+
+    <figure>
+        <img src="https://www.atomicmuseum.vegas/wp-content/uploads/2026/06/Atomic_Museum_Logo_Red_White_web-1-1-scaled.webp" alt="Atomic Museum" class="triggerImg">
+        <figcaption><p>The National Atomic Testing Museum is a repository for one of the most comprehensive collections of nuclear history. The museum covers the period from the nation’s first nuclear test, code-named Trinity, to the first test at the Nevada Test Site in 1951, to the today's late nuclear age.</p></figcaption>
+        <a href="https://www.atomicmuseum.vegas/visit/" target="_blank" style="font-size: 2em; width:50%;">Link</a><br>
+    </figure>
+
     </div>
 </section>
 
-<section style="height:50vw"></section><!-- BLACK BUFFER -->
+<section style="height:50vw" id="page-bottom-marker"></section><!-- BLACK BUFFER -->
 </main>
 
 </body>
