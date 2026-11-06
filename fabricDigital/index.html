@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geiger World</title>
+    <link rel="icon" type="image/svg+xml" href="../geiger235/homePageIcons/popCultureLogo.svg" sizes="any">
+    <link rel="stylesheet" type="text/css" href="fabric.css">
+</head>
+<body>
+    <header>
+        <h1>Digital Fabric</h1>
+
+<button onclick="playBeep()">Play Generated Beep</button>
+<button onclick="playTone(261.63)">Low Pitch (C4 Note)</button>
+<button onclick="playTone(440)">Medium Pitch (A4 Note)</button>
+<button onclick="playTone(880)">High Pitch (A5 Note)</button>
+<button onclick="playTone(1500)">Very High Laser sound</button>
+    </header>
+    <main>
+        <div id="grid-container">   </div>
+
+
+    </main>
+</body>
+<script src="fabric.js"></script>
+<style>
+    *{
+    font-family:sans-serif;
+    font-weight:100;
+    }
+
+    html body{
+        background-color: #000;
+        margin:0px;
+        padding:0px;
+        overflow-x: hidden;
+    }
+
+    body{
+        min-height: 100vh;
+            /* Creates distinct black and dark gray stripes at a -45 degree angle 
+            background: repeating-linear-gradient(
+                -45deg,
+                #1a1a1a 0px,
+                #1a1a1a 10px,
+                #262626 10px,
+                #262626 20px
+            );*/
+    }
+    header{
+        background-color: rgb(90, 90, 90);
+        padding:1vw;
+    }
+
+    /*main{
+        
+    }*/
+
+    h1{
+        color: white;
+        margin:0px;
+    }
+
+    #grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* tweak as needed */
+    gap: 10px; /* Ensure this is zero */
+  }
+  /* Style the auto-generated squares */
+    .square {
+    background-color:green;
+    aspect-ratio: 1; /* Keeps them perfectly square */
+    border-radius:0vw;
+    scale:1;
+    transform-origin: center;
+    box-sizing: border-box;  
+
+    transition: border-radius 0.05s ease, transform 0.05s ease, background-color 0.3s ease, scale 0.05s ease;
+    }
+
+    .square:hover, .square.is-active {
+    background-color:lightgreen;
+    border-radius:10vw;
+    scale:3;
+    z-index: 50;  
+    pointer-events: none;
+    animation: vibrate 3s linear infinite;
+    transition: background-color 0.3s ease;
+  }
+  @keyframes vibrate {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+      background-color:rgb(137, 229, 137);
+    }
+    20% {
+      transform: translate(-2px, 3px) rotate(-1deg);
+      background-color:rgb(99, 237, 255);
+    }
+    40% {
+      transform: translate(2px, -1px) rotate(1deg);
+      background-color:rgb(125, 96, 255);
+    }
+    60% {
+      transform: translate(-1px, -4px) rotate(0deg);
+      background-color:rgb(255, 96, 218);
+    }
+    80% {
+      transform: translate(1px, 2px) rotate(-1deg);
+      background-color:rgb(83, 195, 255);
+    }
+    100% {
+      transform: translate(0px, 3px) rotate(0deg);
+      background-color:rgb(58, 255, 232);
+    }
+}
+
+</style>  
+</html>
