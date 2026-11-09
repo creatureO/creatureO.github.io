@@ -221,7 +221,7 @@ section{
 .transitionPoint{
     background-image: linear-gradient(to bottom, #ffdc00 5%, #8b7900 60%,#000 100%);
     height:fit-content;
-    padding:15vh 2vw 25vh 2vw;
+    padding:15vw 2vw 25vw 2vw;
 }
 
 .demoPanel{
@@ -321,23 +321,27 @@ figure{
   margin:0px;
   width:100%;
   overflow:hidden;
-  border:none;
+  border:solid 1px white;
+  border-radius: 2.5vw;
 }
 
 figure img{
-  object-fit: contain; 
+  object-fit: cover;
+  object-position: center;
   max-height: 100%; 
   width:100%;
   border:none; 
   outline:none;
-  border-radius: 2.5vw;
+  transition:filter 0.3s ease;
+}
+
+figure img:hover{
+  filter: hue-rotate(90deg) contrast(10); 
 }
 
 figcaption{
   padding:2vh;
   margin:0px;
-  border-radius: 2.5vw;
-  border:solid 1px white;
 }
 
 .imageArea p{
@@ -723,7 +727,7 @@ nav a {
     section{
         background-color: black;
         height:fit-content;
-        padding:15vh 2vw 25vh 2vw;
+        padding:10vw 4vw 25vh 4vw;
     
         display:block;
         justify-content: space-between;
@@ -749,15 +753,25 @@ nav a {
 
     .imageArea{
       width: 90vw;
-      padding:1vh 2vw;
+      padding:2vh 2vw;
       display:grid;
       grid-template-columns: repeat(2, 1fr); 
       place-items: center; 
-      gap:2.5vh;
+      align-items: start;
+      gap:5vw;
+  }
+
+  figure{
+    padding: 1vw;
+    height:100%;
+  }
+
+  figure img{
+    border-radius: 1vw;
   }
 
   figcaption{
-    padding: 0.5vh;
+    padding: 1vw 2vw;
     max-height:5em;
     overflow-y: auto;
   }
