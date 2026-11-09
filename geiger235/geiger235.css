@@ -421,7 +421,7 @@ hr{
     justify-content: center;
     align-items: center;
     perspective: 1000px; /* Gives 3D depth */
-    margin-left:22vw;
+    margin-left:24vw;
   }
   
   /* The Central Nucleus */
