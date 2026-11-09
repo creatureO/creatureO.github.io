@@ -321,7 +321,8 @@ figure{
   margin:0px;
   width:100%;
   overflow:hidden;
-  border:solid 1px white;
+  border:none;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 2.5vw;
 }
 
@@ -356,6 +357,7 @@ figcaption{
     border:solid 3px white;
     color:white;
     letter-spacing: 0.05em;
+    height:90%;
 }
 
 .elementCard h3{
@@ -762,7 +764,7 @@ nav a {
   }
 
   figure{
-    padding: 1vw;
+    padding: 0vw;
     height:100%;
   }
 
