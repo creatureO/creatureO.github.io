@@ -37,6 +37,7 @@ dialog {
   max-width: 90vw;
   max-height: 90vh;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: none;
 }
 
 /* Style the modal backdrop (the faded background area) */
@@ -58,7 +59,7 @@ dialog::backdrop {
   height: auto;
   border-radius: 1vw;
   border:none;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0);
   width:50vw;
 }
 
@@ -353,11 +354,14 @@ figure img{
   width:100%;
   border:none; 
   outline:none;
-  transition:filter 0.3s ease;
+  transform:scale(1);  
+  transform-origin: bottom;  
+  transition:filter 0.3s ease, transform 1s;
 }
 
 figure img:hover{
   filter: hue-rotate(90deg) contrast(10); 
+  transform:scale(1.1);    
 }
 
 figcaption{
@@ -438,6 +442,10 @@ hr{
 .vibrate-text span:nth-child(5) { animation-delay: -0.02s; }    /* N */
 .vibrate-text span:nth-child(6) { animation-delay: -0.05s; }    /* C */
 .vibrate-text span:nth-child(7) { animation-delay: -0.01s; }    /* E */
+/* --- extra --- */
+.vibrate-text span:nth-child(8) { animation-delay: -0.06s; }    /* E */
+.vibrate-text span:nth-child(9) { animation-delay: -0.02s; }    /* E */
+.vibrate-text span:nth-child(10) { animation-delay: -0.01s; }    /* E */
 
 
   
@@ -607,7 +615,7 @@ hr{
 @media screen and (max-width: 900px){
 /* ======== DIALOG ======= */
 .dialog-content img {
-  width:50vh;
+  width:80vw;
 }
 
 .close-btn {
