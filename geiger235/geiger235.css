@@ -205,9 +205,11 @@ section:first-child h1{
 
 
 .firstSection{
+    display: flex;
+    justify-content: center;
     height:50vh;
     padding:3vh 2vw 10vh 2vw;
-    justify-content: start;
+    margin-left:-10vw;
 }
 
 section{
@@ -237,11 +239,10 @@ section{
 }
 
 .backgroundBasedImage img{
-    height:auto;
-    width:100vw;
-    margin:0px;
-    padding:0px;
-    border-radius: 0px;
+  width: 80vw;
+  padding-left: 10vw;
+  margin: 0px;
+  border-radius: 0px;
 }
 
 .forgroundImage{
@@ -254,7 +255,7 @@ section{
 @keyframes grow-on-scroll {
   from {
     transform: scale(0);
-    opacity: 0.5;
+    opacity: 0;
   }
   to {
     transform: scale(1);
@@ -266,7 +267,7 @@ section{
 .forgroundImage {
   animation-timeline: view();
   animation-name: grow-on-scroll;
-  animation-range: entry 75% contain 100%;
+  animation-range: entry 50% contain 100%;
   will-change: transform; 
 }
 
@@ -279,7 +280,7 @@ section{
 
 .textArea figure{
   max-width: 80%;
-  margin-left: 2vw;
+  margin-left: 3vw;
 }
 
 .textArea figcaption{
@@ -306,8 +307,8 @@ section p{
     color:white;
     font-size:1.5em;
     line-height: 1.5em;
-    width:30vw; /* makes size of text box bigger */
-    padding:1vh 2vw;
+    max-width:30vw; /* makes size of text box bigger */
+    padding:1vh 3vw;
     margin:0px;
 }
 
@@ -404,7 +405,6 @@ hr{
     display:flex;
     justify-content: center;
     align-items: start;
-    padding-left:24vw;
 }
 
 .vibrate-text span {
@@ -631,6 +631,11 @@ header svg{
         display:none;
     }
 
+    .firstSection{
+      display:block;
+      margin:0px;
+    }
+
     .firstSection h1{
         font-size: 2em;
         padding-left: 5vw;
@@ -798,7 +803,7 @@ nav a {
         color:white;
         font-size:1em;
         line-height: 1.25em;
-        width:80vw;
+        max-width:80vw;
         padding:1vh 3vw;
         margin:0px;
     }
