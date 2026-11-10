@@ -306,8 +306,8 @@ section p{
     color:white;
     font-size:1.5em;
     line-height: 1.5em;
-    max-width:30vw; /* makes size of text box bigger */
-    padding:1vh 3vw;
+    width:30vw; /* makes size of text box bigger */
+    padding:1vh 2vw;
     margin:0px;
 }
 
