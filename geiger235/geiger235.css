@@ -798,7 +798,7 @@ nav a {
         color:white;
         font-size:1em;
         line-height: 1.25em;
-        max-width:80vw;
+        width:80vw;
         padding:1vh 3vw;
         margin:0px;
     }
