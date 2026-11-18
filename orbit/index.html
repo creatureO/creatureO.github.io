@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <!-- PNG stuff -->
+  <link rel="icon" type="image/png" href="./website-images/home-page-icons/IOS-icon.png" sizes="180x180">
+  <!-- Preferred: scalable SVG -->
+  <link rel="icon" type="image/svg+xml" href="./website-images/home-page-icons/orbit-logo.svg">
+  <!-- 2. For iOS Home Screen and Safari Favorites Grid (The solid PNG version) -->
+  <link rel="apple-touch-icon" href="./website-images/home-page-icons/IOS-icon.png">
+  <title>Orbit</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+    *{
+        font-family: 'Zen Kaku Gothic New' ,sans-serif;
+        font-weight: 100;
+    }
+    body{
+        margin:0px;
+        overflow-x: clip;
+    }
+</style>
+</head>
+
+<body>
+<header>
+<section><img src="./website-images/home-page-icons/orbit-corp-logo.svg"/></section>
+<nav>
+    <ul>
+        <li><a href="./">regiester</a></li>
+        <li><a href="./">learn</a></li>
+        <li><a href="./">active</a></li>
+        <li><a href="./">about</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+    <div class="info-bar-slider">
+        <div class="info-bar">
+            <p>Water</p>
+            <svg viewBox="0 0 200 200" width="200" height="200">
+                <!-- Circle drawn as a path -->
+                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#3b82f6" />
+                <!-- Centered straight text -->
+                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
+                    35.00
+                </text>
+            </svg>
+            <br>
+
+            <p>Food</p>
+            <svg viewBox="0 0 200 200" width="200" height="200">
+                <!-- Circle drawn as a path -->
+                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#24FFAA" />
+                <!-- Centered straight text -->
+                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
+                    05.50
+                </text>
+            </svg>
+            <br>
+            
+            <p>Air</p>
+            <svg viewBox="0 0 200 200" width="200" height="200">
+                <!-- Circle drawn as a path -->
+                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#DEDEDE" />
+                <!-- Centered straight text -->
+                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
+                    005.0
+                </text>
+            </svg>
+            <br>
+
+            <p>Radiation</p>
+            <svg viewBox="0 0 200 200" width="200" height="200">
+                <!-- Circle drawn as a path -->
+                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#5E6E00" />
+                <!-- Centered straight text -->
+                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
+                    0.001
+                </text>
+            </svg>
+            <br>
+
+            <div class="years-left">
+                <h2>Yrs: 50</h2><br>
+                <h2>Day: 320</h2><br>
+                <h2> Hrs: 20</h2><br>
+                <h2>Min: 09</h2><br>
+                <h2>Sec: 12</h2><br>
+            </div>
+        </div>
+    </div>
+    <div class="main-area">
+        <section class="price-and-time">
+            <p>PRICE OF NEXT LAUNCH PERMIT: &nbsp;<span id="priceTag">5,000,000,000 &sect;</span></p>
+            <p>TIME UNTIL NEXT LAUNCH: &nbsp;<span id="launchTimer">52:23:10</span></p>
+        </section>
+        <div id="waterBar"><p>Exaliters (EL) &#128167;</p></div>
+        <div id="foodBar"><p>Yottajoules (YJ) &#9889;</p></div>
+        <div id="airBar"><p>Air Quality Index (AQI) &#128168;</p></div>
+        <div id="radBar"><p>Sievert (Sv) &#9762;</p></div>
+        <section class="flex-box">
+            <div class="block-box">
+            <div class="info-card">
+                <h2>Earth is Dying</h2>
+                <br>
+                <p>
+                As much as Orbit Corp values the sanctity of earth, 
+                it’s decline since 2045 has called to action the 
+                necessity of extraterrestrial colonization efforts.
+                <br><br>
+                our planet will fall, but our species shall live on. 
+                The question now is if you’ll let your family be a 
+                part of that future.
+                <br><br>
+                Time is ticking.
+                </p>
+                <br><br>
+            </div>
+            <section class="flex-box" style="column-gap: 0px;">
+                <div style=" display: block; width:15vw; height:15vw;">
+                    <div class="clock-1">
+                        <div class="clockHand1" id="cockHand1"></div>
+                    </div>
+                    <div class="clock-2">
+                        <div class="clockHand2" id="cockHand2"></div>
+                        <div class="clockHand2" id="cockHand3"></div>
+                    </div>
+                </div>
+                <div class="slider-wrapper">
+                    <input type="range" min="0" max="100" value="0" class="speedy-meter" id="speedMeter">
+                    <p>speed</p>
+                </div>
+            </section>
+            </div>
+
+            <div id="globeWater">              
+                <svg id="globeContinents" viewBox="0 0 1600 420">
+                    <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #24ffaa;
+                          }
+                        </style>
+                      </defs>
+                      <path class="cls-1" d="M794.15,76.93h-33.84c-4.03,0-7.29,3.26-7.29,7.29v1.52c0,4.03,3.26,7.29,7.29,7.29h10.53c4.03,0,7.29,3.26,7.29,7.29v10.84c0,4.03-3.26,7.29-7.29,7.29h-74.2c-4.03,0-7.29-3.26-7.29-7.29h0c0-4.03-3.26-7.29-7.29-7.29h-27.56c-4.03,0-7.29-3.26-7.29-7.29v-22.28c0-4.03,3.26-7.29,7.29-7.29h38.33c4.03,0,7.29-3.26,7.29-7.29v-9.27c0-4.03,3.26-7.29,7.29-7.29h86.75c4.03,0,7.29,3.26,7.29,7.29v19.19c0,4.03-3.26,7.29-7.29,7.29ZM637.48,201.07v-.52c0-5.41-4.38-9.79-9.79-9.79h-65.57c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h53.94c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-63.46c-5.41,0-9.79,4.38-9.79,9.79v.93c0,5.41-4.38,9.79-9.79,9.79h-59.23c-5.41,0-9.79,4.38-9.79,9.79v13.21c0,5.41-4.38,9.79-9.79,9.79h-66.36c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h90.57c5.41,0,9.79-4.38,9.79-9.79h0c0-5.41,4.38-9.79,9.79-9.79h29.73c5.41,0,9.79,4.38,9.79,9.79v1.05c0,5.41,4.38,9.79,9.79,9.79h31.2c5.41,0,9.79,4.38,9.79,9.79v5.72c0,5.41,4.38,9.79,9.79,9.79h71.92c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-22.73c-5.41,0-9.79-4.38-9.79-9.79ZM725.07,301.65v-3.85c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v2.57c0,6.03-4.89,10.92-10.92,10.92h-63.11c-6.03,0-10.92,4.89-10.92,10.92v26.98c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-15.42c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92h0c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92v-10.28c0-6.03-4.89-10.92-10.92-10.92h-23.07c-6.03,0-10.92-4.89-10.92-10.92ZM176.34,35.69h-23.07c-6.03,0-10.92,4.89-10.92,10.92v10.28c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92h0c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92v15.42c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-26.98c0-6.03-4.89-10.92-10.92-10.92h-63.11c-6.03,0-10.92-4.89-10.92-10.92v-2.57c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v3.85c0,6.03-4.89,10.92-10.92,10.92ZM193.53,335.02h61.1c7.27,0,13.17,5.89,13.17,13.17v2.74c0,7.27-5.89,13.17-13.17,13.17h-19c-7.27,0-13.17,5.89-13.17,13.17v19.58c0,7.27,5.89,13.17,13.17,13.17h133.96c7.27,0,13.17-5.89,13.17-13.17h0c0-7.27,5.89-13.17,13.17-13.17h49.77c7.27,0,13.17-5.89,13.17-13.17v-40.23c0-7.27-5.89-13.17-13.17-13.17h-69.19c-7.27,0-13.17-5.89-13.17-13.17v-16.74c0-7.27-5.89-13.17-13.17-13.17h-156.63c-7.27,0-13.17,5.89-13.17,13.17v34.64c0,7.27,5.89,13.17,13.17,13.17ZM282.9,161.22h22.73c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-71.92c-5.41,0-9.79,4.38-9.79,9.79v5.72c0,5.41-4.38,9.79-9.79,9.79h-31.2c-5.41,0-9.79,4.38-9.79,9.79v1.05c0,5.41-4.38,9.79-9.79,9.79h-29.73c-5.41,0-9.79-4.38-9.79-9.79h0c0-5.41-4.38-9.79-9.79-9.79H23.49c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h66.36c5.41,0,9.79,4.38,9.79,9.79v13.21c0,5.41,4.38,9.79,9.79,9.79h59.23c5.41,0,9.79,4.38,9.79,9.79v.93c0,5.41,4.38,9.79,9.79,9.79h63.46c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-53.94c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h65.57c5.41,0,9.79-4.38,9.79-9.79v-.52c0-5.41,4.38-9.79,9.79-9.79ZM1582.31,76.93h-33.84c-4.03,0-7.29,3.26-7.29,7.29v1.52c0,4.03,3.26,7.29,7.29,7.29h10.53c4.03,0,7.29,3.26,7.29,7.29v10.84c0,4.03-3.26,7.29-7.29,7.29h-74.2c-4.03,0-7.29-3.26-7.29-7.29h0c0-4.03-3.26-7.29-7.29-7.29h-27.56c-4.03,0-7.29-3.26-7.29-7.29v-22.28c0-4.03,3.26-7.29,7.29-7.29h38.33c4.03,0,7.29-3.26,7.29-7.29v-9.27c0-4.03,3.26-7.29,7.29-7.29h86.75c4.03,0,7.29,3.26,7.29,7.29v19.19c0,4.03-3.26,7.29-7.29,7.29ZM1425.64,201.07v-.52c0-5.41-4.38-9.79-9.79-9.79h-65.57c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h53.94c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-63.46c-5.41,0-9.79,4.38-9.79,9.79v.93c0,5.41-4.38,9.79-9.79,9.79h-59.23c-5.41,0-9.79,4.38-9.79,9.79v13.21c0,5.41-4.38,9.79-9.79,9.79h-66.36c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h90.57c5.41,0,9.79-4.38,9.79-9.79h0c0-5.41,4.38-9.79,9.79-9.79h29.73c5.41,0,9.79,4.38,9.79,9.79v1.05c0,5.41,4.38,9.79,9.79,9.79h31.2c5.41,0,9.79,4.38,9.79,9.79v5.72c0,5.41,4.38,9.79,9.79,9.79h71.92c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-22.73c-5.41,0-9.79-4.38-9.79-9.79ZM1513.23,301.65v-3.85c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v2.57c0,6.03-4.89,10.92-10.92,10.92h-63.11c-6.03,0-10.92,4.89-10.92,10.92v26.98c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-15.42c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92h0c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92v-10.28c0-6.03-4.89-10.92-10.92-10.92h-23.07c-6.03,0-10.92-4.89-10.92-10.92ZM964.5,35.69h-23.07c-6.03,0-10.92,4.89-10.92,10.92v10.28c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92h0c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92v15.42c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-26.98c0-6.03-4.89-10.92-10.92-10.92h-63.11c-6.03,0-10.92-4.89-10.92-10.92v-2.57c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v3.85c0,6.03-4.89,10.92-10.92,10.92ZM981.7,335.02h61.1c7.27,0,13.17,5.89,13.17,13.17v2.74c0,7.27-5.89,13.17-13.17,13.17h-19c-7.27,0-13.17,5.89-13.17,13.17v19.58c0,7.27,5.89,13.17,13.17,13.17h133.96c7.27,0,13.17-5.89,13.17-13.17h0c0-7.27,5.89-13.17,13.17-13.17h49.77c7.27,0,13.17-5.89,13.17-13.17v-40.23c0-7.27-5.89-13.17-13.17-13.17h-69.19c-7.27,0-13.17-5.89-13.17-13.17v-16.74c0-7.27-5.89-13.17-13.17-13.17h-156.63c-7.27,0-13.17,5.89-13.17,13.17v34.64c0,7.27,5.89,13.17,13.17,13.17ZM1071.07,161.22h22.73c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-71.92c-5.41,0-9.79,4.38-9.79,9.79v5.72c0,5.41-4.38,9.79-9.79,9.79h-31.2c-5.41,0-9.79,4.38-9.79,9.79v1.05c0,5.41-4.38,9.79-9.79,9.79h-29.73c-5.41,0-9.79-4.38-9.79-9.79h0c0-5.41-4.38-9.79-9.79-9.79h-90.57c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h66.36c5.41,0,9.79,4.38,9.79,9.79v13.21c0,5.41,4.38,9.79,9.79,9.79h59.23c5.41,0,9.79,4.38,9.79,9.79v.93c0,5.41,4.38,9.79,9.79,9.79h63.46c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-53.94c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h65.57c5.41,0,9.79-4.38,9.79-9.79v-.52c0-5.41,4.38-9.79,9.79-9.79Z"/>
+                </svg>
+            </div>
+
+
+        </section>
+        <hr>
+        <section>
+            <div class="slider-wrapper">
+                <div style="padding:5vw 5vw;">
+                    <input type="range" min="0" max="100" value="0" class="sliding-meter" id="myMeter">
+                </div>
+            </div>
+        </section>
+
+        <section class="flex-box">
+            <div class="info-card">
+                <h2>Our Mission</h2>
+                <br>
+                <p>
+                Is to send humanity to the stars, preserving the human race in the name of industry, capital, 
+                and the American way. We encourage all age groups to volunteer for the opportunity of a life 
+                time and colonize the cosmos. Your skills and attributes make you a unique man or woman for 
+                making a home in a new world.
+                <br><br>
+                Price of Admission<br>
+                <span id="priceTag">5,000,000,000 &sect;</span>
+                <br><br>
+                Next Launch<br>
+                <span id="launchTimer">52:23:10</span>
+                <br><br>
+                </p>
+            </div>
+            <svg id="rocket" viewBox="0 0 318.28 800">
+                <path d="M309.14,716.27c0-14.67-31.55-91.54-56.82-91.54h-12.18s-.06,0-.09,0V221.29c0-32.76-40.9-204.47-73.66-204.47h-15.79c-32.76,0-73.66,171.71-73.66,204.47v403.44h-10.99c-25.27,0-56.82,76.87-56.82,91.54v47.54h67.81v19.37h163.1v-19.37h69.09s0-47.54,0-47.54Z"/>
+            </svg>
+        </section>
+    </div>
+</main>
+
+</body>
+
+</html>
