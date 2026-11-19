@@ -29,7 +29,7 @@ nav ul{
    list-style: none;
    display: flex;
    align-items: start;
-   width: 100%;
+   width: fit-content;
    height: 100%;
    margin: 0px;
    padding: 1vw;
@@ -129,8 +129,10 @@ section{
 }
 
 #waterBar p, #foodBar p, #airBar p, #radBar p{
+    font-size: 1vw;
     position: absolute;
     display: flex;
+    white-space: nowrap;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -298,4 +300,36 @@ section{
   background: #007bff;
   cursor: pointer;
   transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.grid-area{
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+place-items: center;
+column-gap:5px;
+row-gap: 10px;
+}
+
+.grid-area img{
+    max-width: 1vw;
+}
+
+/* ======= FOOTER ======== */
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 4vw 2vw;
+    height: fit-content;
+}
+
+footer svg{
+    fill: rgb(67, 67, 67);
+    max-width: 25%;
+}
+
+footer h2{
+    color: white;
 }
