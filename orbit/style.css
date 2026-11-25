@@ -137,29 +137,36 @@ section{
 } 
 
 #waterBar, #foodBar, #airBar, #radBar{
-    height:2.5vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1vw 2vw;
     position: relative;
 }
 
 #waterBar p, #foodBar p, #airBar p, #radBar p{
     font-size: 1vw;
-    position: absolute;
-    display: flex;
     white-space: nowrap;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    padding-left: 1vw;
     margin: 0px;
+    white-space: wrap;
 }
 
-#waterBar {background-color:#3b82f6;}
+#waterBar {background-color:#3b82f6; height: 5vw;}
 
-#foodBar {background-color:#24FFAA;}
+#foodBar {
+    color: white; 
+    background-color:#24FFAA;
+    height: 1vw;
+    clip-path: polygon(0% 0%, 30% 0%, 50% 100%, 0% 100%);
+    position: absolute; 
+    bottom:0px; 
+    left: 0px;
+}
 
-#airBar{background-color:#DEDEDE; width:7%;}
+#airBar{color: white; background-color:#DEDEDE; width:100%; height: 8vw;}
 
-#radBar {background-color:#5E6E00; width:5%;}
+#radBar {background: linear-gradient(rgb(255,255,255), rgb(94, 110, 0)); width:100%;}
 
 
 .flex-box{

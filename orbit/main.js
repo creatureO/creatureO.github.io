@@ -63,24 +63,6 @@ function updateApocolypseTimer() {
   earthHours.textContent = `${planetHrs}`;
   earthMinutes.textContent = `${planetMin}`;
   earthSeconds.textContent = `${planetSec}`;
-
-
-// =================================== Bars change now due to the countdown of earth.
-if (planetMin === "30") {
-  waterBar.style.width = "20%";
-}
-
-if (planetMin === "30") {
-  foodBar.style.width = "35%";
-}
-
-if (planetMin === "25") {
-  airBar.style.width = "80%";
-}
-
-if (planetMin === "40") {
-  radBar.style.width = "50%";
-}
 }
 
 // Run once immediately so there isn't a 1-second delay before updating
@@ -118,7 +100,7 @@ const earthInterval = setInterval(() => {
 }, 1000); //ticking speed !!!
 
 setInterval(() => {
-  console.log(endOfWorld);// endOfWorld is Key here
+  //console.log(endOfWorld);// endOfWorld is Key here
 }, 1000);
 
 
@@ -132,6 +114,8 @@ const waterBar = document.getElementById("waterBar");
 const foodBar = document.getElementById("foodBar");
 const airBar = document.getElementById("airBar");
 const radBar = document.getElementById("radBar");
+const wheat = document.querySelector('.wheat');
+
 
 function updateGlobeColor() {
   const pct = endOfWorld / TOTAL_POOL;   // 1 at start, 0 at the end // Hue 200 (blue) -> 0 (red) as time runs out
@@ -147,7 +131,8 @@ function updateGlobeColor() {
   earthColor2.style.outline = `solid ${thick}px rgb(${hue2 * 150}, ${hue2 * 200}, 0)`;
   waterBar.style.backgroundColor = `rgb(${hue/16 + 50}, ${hue/8 + 100}, ${hue})`;
   airBar.style.backgroundColor = `rgb(${hue/1.05}, ${hue / 1.05}, ${hue/1.05})`;
-  radBar.style.backgroundColor = `rgb(${hue2 * 150}, ${hue2 * 200}, 0)`;
+  radBar.style.background = `linear-gradient(rgb(255,255,255), rgb(${hue2 * 150}, ${hue2 * 200}, 0))`;
+  wheat.style.fill = `rgb(50, ${hue}, ${hue/1.5})`;
 }
 
 function updateContinentColor() {
@@ -160,6 +145,35 @@ function updateContinentColor() {
 // #radBar {background-color:rgb(94, 110, 0); width:5%;}
 }
 
+
+
+// ============================================== WHEAT STUFF
+const BASE_Y = 90;      // bottom of the rects (your y=40 + height=50)
+const MAX_H = 50;
+const wheatRects = document.querySelectorAll('.wheat');
+function updateWheat() {
+  const pct = endOfWorld / TOTAL_POOL;
+  const n = wheatRects.length;
+
+  wheatRects.forEach((rect, i) => {
+    // Each rect "owns" a slice of the timeline: rect i starts dying at
+    // (n - i) / n of the way... this staggers them left to right.
+    const start = i / n;                               // 0 .. ~1
+    const local = Math.min(1, Math.max(0, (pct - start) * n));  // 0..1 for this rect
+    const h = MAX_H * local*10;
+
+    rect.setAttribute("width", h);
+    rect.setAttribute("y", BASE_Y - h);                // keep bottom anchored
+  });
+}
+
+
+// ============================================== Water Stuff STUFF
+function updateWater() {
+  const pct = (endOfWorld / TOTAL_POOL) *10;
+  const waterlevel = document.getElementById('waterBar');
+  waterlevel.style.height= `${pct/1.5}vw`;
+}
 
 
 // ============================================== EARTH INTERVAL
@@ -180,6 +194,8 @@ meter.addEventListener("input", () => {
   updateApocolypseTimer();
   updateGlobeColor();
   updateContinentColor();
+  updateWheat();
+  updateWater();
 });
 
 meter.addEventListener("pointerdown", () => (isScrubbing = true));
@@ -197,6 +213,8 @@ function frame(now) {
     updateApocolypseTimer();
     updateGlobeColor();
     updateContinentColor();
+    updateWheat();
+    updateWater();
   }
   requestAnimationFrame(frame);
 }
