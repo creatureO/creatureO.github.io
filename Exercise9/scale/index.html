@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale Box Demo</title>
+    <style>
+      body { 
+        font-family: sans-serif; 
+        padding: 1.25rem; 
+      }
+      #box {
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        background: #3b82f6; 
+        color: white; 
+        transition: width .15s ease, height .15s ease;
+        user-select: none;
+      }
+      .controls { 
+        display: flex; 
+        gap: .5rem; 
+        margin: .75rem 0; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <button id="inc">Increase Size</button>
+      <button id="dec">Decrease Size</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div id="box">100px</div>
+
+    <script>
+
+      function changeValue(currentPx, deltaPx, minPx = 60, maxPx = 320) {
+        const next = currentPx + deltaPx;
+        return Math.max(minPx, Math.min(maxPx, next));
+      }
+
+      const box   = document.querySelector('#box');
+      const inc   = document.querySelector('#inc');
+      const dec = document.querySelector('#dec');
+      const reset = document.querySelector('#reset');
+
+
+      let sizePx = 100;          // starting size
+      let blue   = 200;          // starting blue channel
+      const step = 20;           // size step
+    
+      function render() {
+          box.style.width  = sizePx + 'px';
+          box.style.height = sizePx + 'px';
+          box.textContent = sizePx + 'px';
+      }
+
+      inc.addEventListener('click', () => {
+          sizePx = changeValue(sizePx, +step, 60, 320);
+          render();
+        });
+
+      dec.addEventListener('click', () => {
+        sizePx = changeValue(sizePx, -step, 60, 320);
+        render();
+      });
+
+      
+      reset.addEventListener('click', () => {
+        sizePx = 100;
+        render();
+      });
+
+      render(); // initial paint
+
+    </script>
+  </body>
+</html>

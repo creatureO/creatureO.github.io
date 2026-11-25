@@ -39,13 +39,15 @@
 </nav>
 </header>
 <main>
-    <div class="info-bar-slider">
+    <div class="price-and-time">
         <div class="info-bar">
+
+            <p>TIME UNTIL NEXT LAUNCH: &nbsp;<span id="launchTimer">52:23:10</span></p>
+
+            <!--
             <p>Water</p>
             <svg viewBox="0 0 200 200" width="200" height="200">
-                <!-- Circle drawn as a path -->
                 <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#3b82f6" />
-                <!-- Centered straight text -->
                 <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
                     35.00
                 </text>
@@ -54,9 +56,7 @@
 
             <p>Food</p>
             <svg viewBox="0 0 200 200" width="200" height="200">
-                <!-- Circle drawn as a path -->
                 <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#24FFAA" />
-                <!-- Centered straight text -->
                 <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
                     05.50
                 </text>
@@ -65,9 +65,7 @@
             
             <p>Air</p>
             <svg viewBox="0 0 200 200" width="200" height="200">
-                <!-- Circle drawn as a path -->
                 <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#DEDEDE" />
-                <!-- Centered straight text -->
                 <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
                     005.0
                 </text>
@@ -76,33 +74,29 @@
 
             <p>Radiation</p>
             <svg viewBox="0 0 200 200" width="200" height="200">
-                <!-- Circle drawn as a path -->
                 <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#5E6E00" />
-                <!-- Centered straight text -->
+                 
                 <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
                     0.001
                 </text>
-            </svg>
-            <br>
-
-            <div class="years-left">
-                <h2>Yrs: <span id="earthYears">50</span></h2><br>
-                <h2>Day: <span id="eartDays">320</span></h2><br>
-                <h2> Hrs: <span id="earthHours">20</span></h2><br>
-                <h2>Min: <span  id="earthMinutes">09</span></h2><br>
-                <h2>Sec: <span id="earthSeconds">12</span></h2><br>
-            </div>
+            </svg> -->
+            <br><br><br><br>
+            <p>PRICE OF NEXT LAUNCH PERMIT:<br><br><span id="priceTag">5,000,000,000 &sect; </p>
+            
         </div>
     </div>
     <div class="main-area">
-        <section class="price-and-time">
-            <p>PRICE OF NEXT LAUNCH PERMIT: &nbsp;<span id="priceTag">5,000,000,000</span> &sect; </p>
-            <p>TIME UNTIL NEXT LAUNCH: &nbsp;<span id="launchTimer">52:23:10</span></p>
+        <section class="info-bar-slider">
+            <p style="border-right: 1px solid black;"><span>YEARS OF EARTH HABITABILITY LEFT</span></p>
+            <div class="years-left">
+                <p><span id="earthYears">50</span>_Years</p><br>
+                <p><span id="eartDays">320</span>_Days</p><br>
+                <p><span id="earthHours">20</span>_Hours</p><br>
+                <p><span  id="earthMinutes">09</span>_Minutes</p><br>
+                <p><span id="earthSeconds">12</span>_Seconds</p><br>
+            </div>
         </section>
-        <div id="waterBar"><p>Exaliters (EL) &#128167;</p></div>
-        <div id="foodBar"><p>Yottajoules (YJ) &#9889;</p></div>
-        <div id="airBar"><p>Air Quality Index (AQI) &#128168;</p></div>
-        <div id="radBar"><p>Sievert (Sv) &#9762;</p></div>
+        <br><br>
         <section class="flex-box">
             <div class="block-box">
             <div class="info-card">
@@ -122,7 +116,6 @@
                 <br><br>
             </div>
             <section class="flex-box" style="column-gap: 0px;">
-                <div style=" display: block; width:15vw; height:15vw;">
                     <div class="clock-1">
                         <div class="clockHand1" id="cockHand1"></div>
                     </div>
@@ -130,11 +123,10 @@
                         <div class="clockHand2" id="cockHand2"></div>
                         <div class="clockHand2" id="cockHand3"></div>
                     </div>
-                </div>
-                <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="speedy-meter" id="speedMeter">
+                <!--<div class="slider-wrapper" style="width:300px;">
+                      <input type="range" min="0" max="100" value="0" class="speedy-meter" id="speedMeter"> 
                     <p>speed</p>
-                </div>
+                </div> --> 
             </section>
             </div>
 
@@ -153,15 +145,25 @@
 
 
         </section>
-        <hr>
+        <br>
         <section>
+            <div class="time-line">
+                <div class="grid-pieces" style=" font-size: 1vw;"> <p>4 months</p> <p>8 months</p> <p>12 months</p> <p>16 months</p> <p>20 months</p> <p>24 months</p> </div>
+                <div class="grid-pieces"> <p>|</p> <p>|</p> <p>|</p> <p>|</p> <p>|</p> <p>|</p> </div>            
+            </div>
             <div class="slider-wrapper">
-                <div style="padding:5vw 5vw;">
+                <div class="block-box" style="padding:2.5vw 5vw;">
                     <input type="range" min="0" max="100" value="0" class="sliding-meter" id="myMeter">
                 </div>
             </div>
-        </section>
 
+            <div id="waterBar"><p>Exaliters (EL) &#128167;</p></div>
+            <div id="foodBar"><p>Yottajoules (YJ) &#9889;</p></div>
+            <div id="airBar"><p>Air Quality Index (AQI) &#128168;</p></div>
+            <div id="radBar"><p>Sievert (Sv) &#9762;</p></div>
+        </section>
+        <hr>
+        <br><br><br><br>
         <section class="flex-box">
             <div class="block-box">
             <div class="info-card">
@@ -196,7 +198,7 @@
                 <br>
                 <p><br><br><br>= 1,000,000  Male/Female  Astronaut
                     <br><br><br>
-                    1 second= 1 year on earth</p>
+                    1 second= 2 days on earth</p>
             </section>
             <div class="grid-area">
                 <img src="./website-images/home-page-icons/astronaut.svg">

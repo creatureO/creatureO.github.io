@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Uppercase Function Demo</title>
+        <style>
+            body { 
+                font-family: sans-serif; 
+                font-size: 20px;
+                padding: 1.5rem; 
+            }
+            .row { 
+                display: flex; 
+                gap: .5rem; 
+                align-items: center; 
+            }
+            #output { 
+                font-weight: 600; 
+                margin-top: .75rem; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <input id="textInput" type="text" placeholder="type something…" />
+            <button id="toUpperBtn">Make UPPERCASE</button>
+        </div>
+        <div id="output"></div>
+
+        <script>
+
+            const input  = document.querySelector('#textInput');
+            const button = document.querySelector('#toUpperBtn');
+            const output = document.querySelector('#output');
+
+            function makeUppercase(text) {
+                return text.toUpperCase();
+            }
+
+            button.addEventListener('click', () => {
+                const result = makeUppercase(input.value);
+                output.textContent = `Transformed: ${result}`;
+            });
+
+        </script>
+
+    </body>
+</html>

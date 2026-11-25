@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale Box Demo with Color</title>
+    <style>
+      body { 
+        font-family: sans-serif; 
+        padding: 1.25rem; 
+      }
+      #box {
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        background: #3b82f6; 
+        color: white; 
+        transition: width .15s ease, height .15s ease;
+        user-select: none;
+      }
+      .controls { 
+        display: flex; 
+        gap: .5rem; 
+        margin: .75rem 0; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <button id="inc">Increase Size</button>
+      <button id="dec">Decrease Size</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div id="box">100px</div>
+
+    <script>
+
+      function changeValue(currentPx, deltaPx, minPx = 60, maxPx = 320) {
+        const next = currentPx + deltaPx;
+        return Math.max(minPx, Math.min(maxPx, next));
+      }
+
+      const box   = document.querySelector('#box');
+      const inc   = document.querySelector('#inc');
+      const dec = document.querySelector('#dec');
+      const reset = document.querySelector('#reset');
+
+
+      let sizePx = 100;          
+      let blue   = 200;          
+      const step = 20;          
+    
+      function render() {
+          box.style.width  = sizePx + 'px';
+          box.style.height = sizePx + 'px';
+        
+          box.style.backgroundColor = `rgb(50, 100, ${blue})`; 
+         
+        
+          // Change color depending on limits
+          // if (sizePx === 60) {
+          //   box.style.background = '#ef4444'; // red when at min
+          // } else if (sizePx === 320) {
+          //   box.style.background = '#22c55e'; // green when at max
+          // } else {
+          //   box.style.background = '#3b82f6'; // default blue
+          // }
+
+          box.innerHTML = 'Size:' + sizePx + 'px <br>' + 'Blue: ' + blue;
+      }
+
+      inc.addEventListener('click', () => {
+          sizePx = changeValue(sizePx, +step, 60, 320);
+          blue   = changeValue(blue, +step, 0, 255);
+          render();
+        });
+
+      dec.addEventListener('click', () => {
+        sizePx = changeValue(sizePx, -step, 60, 320);
+        blue   = changeValue(blue, -step, 0, 255);
+        render();
+      });
+
+      
+      reset.addEventListener('click', () => {
+        sizePx = 100;
+        blue   = 200;
+        render();
+      });
+
+      render(); // initial paint
+
+    </script>
+  </body>
+</html>
