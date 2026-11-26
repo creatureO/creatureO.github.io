@@ -54,6 +54,22 @@ main{
     border-right: 1px solid black;
 }
 
+.price-and-time button{
+    width: 100%;
+    padding: 1vw 0vw;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: hsl(0, 0%, 0%);
+    transition: background-color ease 0.2s, color 0.2s ease;
+}
+
+.price-and-time button:hover{
+    color: #000000;
+    background-color: #dcdcdc;
+    font-weight: 900;
+}
+
 #priceTag{
  white-space: nowrap;
  background-color: rgb(220, 220, 220);
@@ -145,6 +161,13 @@ section{
     position: relative;
 }
 
+#waterBar h2, #foodBar h2, #airBar h2, #radBar h2{
+    position: absolute;
+    top:0.5vw; 
+    left:15vw;
+    font-size: 1.25vw;
+}
+
 #waterBar p, #foodBar p, #airBar p, #radBar p{
     font-size: 1vw;
     white-space: nowrap;
@@ -152,7 +175,10 @@ section{
     white-space: wrap;
 }
 
-#waterBar {background-color:#3b82f6; height: 5vw;}
+#waterBar {
+    background-color:#3b82f6; 
+    height: 5vw;
+}
 
 #foodBar {
     color: white; 
@@ -168,6 +194,35 @@ section{
 
 #radBar {background: linear-gradient(rgb(255,255,255), rgb(94, 110, 0)); width:100%;}
 
+
+#waterFish{
+    max-width: 10%;
+    position: absolute;
+    animation: swim 5s linear infinite;
+    transition: translate 1s ease;
+}
+
+@keyframes swim {
+    0% { 
+        transform: translateX(-180%) scaleX(1);
+    }
+
+    45% {
+        transform: translateX(200%) scaleX(1);
+    }
+
+    50% { 
+        transform: translateX(200%) scaleX(-1);
+    }
+
+    95% {
+        transform: translateX(-180%) scaleX(-1);
+    }
+
+    100% { 
+        transform: translateX(-180%) scaleX(1);
+    }
+}
 
 .flex-box{
     display: flex;
@@ -189,6 +244,21 @@ section{
 
 .info-card p{
     max-width: 20em;
+}
+
+.overlay-info{
+    position: fixed; /* Ensures it stays locked relative to the viewport */
+    top: 0;
+    left: 0;
+    /* Centers the circle precisely over the true pointer position */
+    transform: translate(-50%, -50%); 
+    pointer-events: none; /*Vital: allows you to click elements underneath the circle */
+    transition: transform 0.05s ease-out; /* Smooth transition for positioning updates */
+    z-index: 9999;
+    width: 20vw;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    background: rgb(255, 255, 255, 0.85);
 }
 
 #globeWater{

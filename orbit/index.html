@@ -43,51 +43,18 @@
         <div class="info-bar">
 
             <p>TIME UNTIL NEXT LAUNCH: &nbsp;<span id="launchTimer">52:23:10</span></p>
-
-            <!--
-            <p>Water</p>
-            <svg viewBox="0 0 200 200" width="200" height="200">
-                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#3b82f6" />
-                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
-                    35.00
-                </text>
-            </svg>
+            <br><br>       
+            <hr>
+            <br><br>
+            <p>PRICE OF NEXT LAUNCH PERMIT:<br><br><span id="priceTag">5,000,000,000 &sect;</span></p> 
             <br>
-
-            <p>Food</p>
-            <svg viewBox="0 0 200 200" width="200" height="200">
-                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#24FFAA" />
-                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
-                    05.50
-                </text>
-            </svg>
-            <br>
-            
-            <p>Air</p>
-            <svg viewBox="0 0 200 200" width="200" height="200">
-                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#DEDEDE" />
-                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
-                    005.0
-                </text>
-            </svg>
-            <br>
-
-            <p>Radiation</p>
-            <svg viewBox="0 0 200 200" width="200" height="200">
-                <path d="M 100, 100 m -80, 0 a 80,80 0 1,0 160,0 a 80,80 0 1,0 -160,0" fill="#5E6E00" />
-                 
-                <text x="100" y="100" text-anchor="middle" dominant-baseline="central" fill="black" font-family="sans-serif" font-size="20">
-                    0.001
-                </text>
-            </svg> -->
-            <br><br><br><br>
-            <p>PRICE OF NEXT LAUNCH PERMIT:<br><br><span id="priceTag">5,000,000,000 &sect; </p>
+            <button id="buyButton">REGISTER NOW</button>
             
         </div>
     </div>
     <div class="main-area">
         <section class="info-bar-slider">
-            <p style="border-right: 1px solid black;"><span>YEARS OF EARTH HABITABILITY LEFT</span></p>
+            <p><span>EARTH HABITABILITY:</span></p>
             <div class="years-left">
                 <p><span id="earthYears">50</span>_Years</p><br>
                 <p><span id="eartDays">320</span>_Days</p><br>
@@ -115,6 +82,11 @@
                 </p>
                 <br><br>
             </div>
+            <div class="slider-wrapper" style="width:300px;">
+                <input type="range" min="0" max="100" value="0" class="speedy-meter" id="speedMeter"> 
+              <p>speed</p>
+            </div>
+
             <section class="flex-box" style="column-gap: 0px;">
                     <div class="clock-1">
                         <div class="clockHand1" id="cockHand1"></div>
@@ -123,26 +95,21 @@
                         <div class="clockHand2" id="cockHand2"></div>
                         <div class="clockHand2" id="cockHand3"></div>
                     </div>
-                <!--<div class="slider-wrapper" style="width:300px;">
-                      <input type="range" min="0" max="100" value="0" class="speedy-meter" id="speedMeter"> 
-                    <p>speed</p>
-                </div> --> 
+
             </section>
             </div>
 
             <div id="globeWater">              
                 <svg id="globeContinents" viewBox="0 0 1600 420">
-                    <defs>
-                        <style>
-                          .cls-1 {
-                            fill: #24ffaa;
-                          }
-                        </style>
-                      </defs>
+                    <defs></defs>
                       <path class="cls-1" d="M794.15,76.93h-33.84c-4.03,0-7.29,3.26-7.29,7.29v1.52c0,4.03,3.26,7.29,7.29,7.29h10.53c4.03,0,7.29,3.26,7.29,7.29v10.84c0,4.03-3.26,7.29-7.29,7.29h-74.2c-4.03,0-7.29-3.26-7.29-7.29h0c0-4.03-3.26-7.29-7.29-7.29h-27.56c-4.03,0-7.29-3.26-7.29-7.29v-22.28c0-4.03,3.26-7.29,7.29-7.29h38.33c4.03,0,7.29-3.26,7.29-7.29v-9.27c0-4.03,3.26-7.29,7.29-7.29h86.75c4.03,0,7.29,3.26,7.29,7.29v19.19c0,4.03-3.26,7.29-7.29,7.29ZM637.48,201.07v-.52c0-5.41-4.38-9.79-9.79-9.79h-65.57c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h53.94c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-63.46c-5.41,0-9.79,4.38-9.79,9.79v.93c0,5.41-4.38,9.79-9.79,9.79h-59.23c-5.41,0-9.79,4.38-9.79,9.79v13.21c0,5.41-4.38,9.79-9.79,9.79h-66.36c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h90.57c5.41,0,9.79-4.38,9.79-9.79h0c0-5.41,4.38-9.79,9.79-9.79h29.73c5.41,0,9.79,4.38,9.79,9.79v1.05c0,5.41,4.38,9.79,9.79,9.79h31.2c5.41,0,9.79,4.38,9.79,9.79v5.72c0,5.41,4.38,9.79,9.79,9.79h71.92c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-22.73c-5.41,0-9.79-4.38-9.79-9.79ZM725.07,301.65v-3.85c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v2.57c0,6.03-4.89,10.92-10.92,10.92h-63.11c-6.03,0-10.92,4.89-10.92,10.92v26.98c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-15.42c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92h0c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92v-10.28c0-6.03-4.89-10.92-10.92-10.92h-23.07c-6.03,0-10.92-4.89-10.92-10.92ZM176.34,35.69h-23.07c-6.03,0-10.92,4.89-10.92,10.92v10.28c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92h0c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92v15.42c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-26.98c0-6.03-4.89-10.92-10.92-10.92h-63.11c-6.03,0-10.92-4.89-10.92-10.92v-2.57c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v3.85c0,6.03-4.89,10.92-10.92,10.92ZM193.53,335.02h61.1c7.27,0,13.17,5.89,13.17,13.17v2.74c0,7.27-5.89,13.17-13.17,13.17h-19c-7.27,0-13.17,5.89-13.17,13.17v19.58c0,7.27,5.89,13.17,13.17,13.17h133.96c7.27,0,13.17-5.89,13.17-13.17h0c0-7.27,5.89-13.17,13.17-13.17h49.77c7.27,0,13.17-5.89,13.17-13.17v-40.23c0-7.27-5.89-13.17-13.17-13.17h-69.19c-7.27,0-13.17-5.89-13.17-13.17v-16.74c0-7.27-5.89-13.17-13.17-13.17h-156.63c-7.27,0-13.17,5.89-13.17,13.17v34.64c0,7.27,5.89,13.17,13.17,13.17ZM282.9,161.22h22.73c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-71.92c-5.41,0-9.79,4.38-9.79,9.79v5.72c0,5.41-4.38,9.79-9.79,9.79h-31.2c-5.41,0-9.79,4.38-9.79,9.79v1.05c0,5.41-4.38,9.79-9.79,9.79h-29.73c-5.41,0-9.79-4.38-9.79-9.79h0c0-5.41-4.38-9.79-9.79-9.79H23.49c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h66.36c5.41,0,9.79,4.38,9.79,9.79v13.21c0,5.41,4.38,9.79,9.79,9.79h59.23c5.41,0,9.79,4.38,9.79,9.79v.93c0,5.41,4.38,9.79,9.79,9.79h63.46c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-53.94c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h65.57c5.41,0,9.79-4.38,9.79-9.79v-.52c0-5.41,4.38-9.79,9.79-9.79ZM1582.31,76.93h-33.84c-4.03,0-7.29,3.26-7.29,7.29v1.52c0,4.03,3.26,7.29,7.29,7.29h10.53c4.03,0,7.29,3.26,7.29,7.29v10.84c0,4.03-3.26,7.29-7.29,7.29h-74.2c-4.03,0-7.29-3.26-7.29-7.29h0c0-4.03-3.26-7.29-7.29-7.29h-27.56c-4.03,0-7.29-3.26-7.29-7.29v-22.28c0-4.03,3.26-7.29,7.29-7.29h38.33c4.03,0,7.29-3.26,7.29-7.29v-9.27c0-4.03,3.26-7.29,7.29-7.29h86.75c4.03,0,7.29,3.26,7.29,7.29v19.19c0,4.03-3.26,7.29-7.29,7.29ZM1425.64,201.07v-.52c0-5.41-4.38-9.79-9.79-9.79h-65.57c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h53.94c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-63.46c-5.41,0-9.79,4.38-9.79,9.79v.93c0,5.41-4.38,9.79-9.79,9.79h-59.23c-5.41,0-9.79,4.38-9.79,9.79v13.21c0,5.41-4.38,9.79-9.79,9.79h-66.36c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h90.57c5.41,0,9.79-4.38,9.79-9.79h0c0-5.41,4.38-9.79,9.79-9.79h29.73c5.41,0,9.79,4.38,9.79,9.79v1.05c0,5.41,4.38,9.79,9.79,9.79h31.2c5.41,0,9.79,4.38,9.79,9.79v5.72c0,5.41,4.38,9.79,9.79,9.79h71.92c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-22.73c-5.41,0-9.79-4.38-9.79-9.79ZM1513.23,301.65v-3.85c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v2.57c0,6.03-4.89,10.92-10.92,10.92h-63.11c-6.03,0-10.92,4.89-10.92,10.92v26.98c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-15.42c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92h0c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92v-10.28c0-6.03-4.89-10.92-10.92-10.92h-23.07c-6.03,0-10.92-4.89-10.92-10.92ZM964.5,35.69h-23.07c-6.03,0-10.92,4.89-10.92,10.92v10.28c0,6.03,4.89,10.92,10.92,10.92h54.32c6.03,0,10.92-4.89,10.92-10.92h0c0-6.03,4.89-10.92,10.92-10.92h5.5c6.03,0,10.92,4.89,10.92,10.92v15.42c0,6.03,4.89,10.92,10.92,10.92h116.81c6.03,0,10.92-4.89,10.92-10.92v-26.98c0-6.03-4.89-10.92-10.92-10.92h-63.11c-6.03,0-10.92-4.89-10.92-10.92v-2.57c0-6.03-4.89-10.92-10.92-10.92h-90.44c-6.03,0-10.92,4.89-10.92,10.92v3.85c0,6.03-4.89,10.92-10.92,10.92ZM981.7,335.02h61.1c7.27,0,13.17,5.89,13.17,13.17v2.74c0,7.27-5.89,13.17-13.17,13.17h-19c-7.27,0-13.17,5.89-13.17,13.17v19.58c0,7.27,5.89,13.17,13.17,13.17h133.96c7.27,0,13.17-5.89,13.17-13.17h0c0-7.27,5.89-13.17,13.17-13.17h49.77c7.27,0,13.17-5.89,13.17-13.17v-40.23c0-7.27-5.89-13.17-13.17-13.17h-69.19c-7.27,0-13.17-5.89-13.17-13.17v-16.74c0-7.27-5.89-13.17-13.17-13.17h-156.63c-7.27,0-13.17,5.89-13.17,13.17v34.64c0,7.27,5.89,13.17,13.17,13.17ZM1071.07,161.22h22.73c5.41,0,9.79-4.38,9.79-9.79v-16.83c0-5.41-4.38-9.79-9.79-9.79h-71.92c-5.41,0-9.79,4.38-9.79,9.79v5.72c0,5.41-4.38,9.79-9.79,9.79h-31.2c-5.41,0-9.79,4.38-9.79,9.79v1.05c0,5.41-4.38,9.79-9.79,9.79h-29.73c-5.41,0-9.79-4.38-9.79-9.79h0c0-5.41-4.38-9.79-9.79-9.79h-90.57c-5.41,0-9.79,4.38-9.79,9.79v10.05c0,5.41,4.38,9.79,9.79,9.79h66.36c5.41,0,9.79,4.38,9.79,9.79v13.21c0,5.41,4.38,9.79,9.79,9.79h59.23c5.41,0,9.79,4.38,9.79,9.79v.93c0,5.41,4.38,9.79,9.79,9.79h63.46c5.41,0,9.79-4.38,9.79-9.79v-8.21c0-5.41-4.38-9.79-9.79-9.79h-53.94c-5.41,0-9.79-4.38-9.79-9.79v-5.41c0-5.41,4.38-9.79,9.79-9.79h65.57c5.41,0,9.79-4.38,9.79-9.79v-.52c0-5.41,4.38-9.79,9.79-9.79Z"/>
                 </svg>
             </div>
 
+            <div class="overlay-info" style="display:none;">
+                <h1>RIGHT NOW</h1>
+                <p></p>
+            </div>
 
         </section>
         <br>
@@ -156,10 +123,10 @@
                     <input type="range" min="0" max="100" value="0" class="sliding-meter" id="myMeter">
                 </div>
             </div>
-            <div id="radBar"><p>005.0 Sievert (Sv) &#9762;</p></div>
+            <div id="radBar"><p>1 Micro Sievert (mSv)</p> <h2>&#9762;</h2> </div> <!-- 1000 mSv is max -->
             <div id="airBar">
-                <p>005.0 Air Quality Index (AQI) &#128168;</p>
-                <svg class="wheat" width="600" height="120">
+                <p>5 Air Quality Index (AQI)</p><h2>&#128168;</h2> <!-- 0-500 AQI is max -->
+                <svg class="wheat" width="550" height="120" fill="#24FFAA">
                     <rect x="0" y="40" width="5" height="50"/>
                     <rect x="40" y="40" width="5" height="50"/>
                     <rect x="80" y="40" width="5" height="50"/>
@@ -172,9 +139,17 @@
                     <rect x="360" y="40" width="5" height="50"/>
                     <rect x="400" y="40" width="5" height="50"/>
                 </svg>
-                <div id="foodBar"><p>05.50 Yottajoules (YJ) &#9889;</p></div>
+                <div id="foodBar"><p>05.50 Yottajoules (YJ)</p><h2>&#9889;</h2></div> <!-- min is 0 Yottajoules -->
             </div>
-            <div id="waterBar"> 03.50 Exaliters (EL) &#128167;</p></div>
+            <div id="waterBar">
+                <p>03.50 Exaliters (EL)</p><h2>&#128167;</h2> <!-- min is 0 Exaliters -->
+                <svg data-name="fish" viewBox="0 0 400 150" fill="#3e6bb9";>
+                  <defs></defs>
+                  <path id="waterFish" d="M375.4,89.14c-35.46,8.74-37.84,13.03-59.27,14.46-.27,2.64-.84,5.23-1.57,7.41-4.83,14.29-21.46,24.39-27.72,20.71-.11-.07-.21-.16-.32-.23-6.33,5.39-13.57,7.98-17.24,5.82-4.09-2.41-4.07-10.92-3.19-15.61.57-3,1.72-5.68,4.46-9.88,1.44-2.21,3.35-4.88,5.83-7.8-11.09-.16-24.52-.45-41.07-.85-28.64-.69-49.59-2.66-65.73-5.06-4.46.52-9.15.92-14.06,1.14-11.29.5-21.46,0-30.21-.94-.25-.92-1.02-4.15.63-7.55.3-.61.64-1.16,1.02-1.66-11.52-2.84-20.78-4.61-34.36-3.35-15.26,1.42-31.96,11.42-31.96,11.42-13.78,9.47-26.82,19.79-34.59,25.8-12.41-33.84,12.64-37.57,3.38-59.78C12.52,22.57,17.92,21.31,22.79,11.94c12.46,12.41,45.52,57.44,73.1,57.76,9.97.12,16.55-3.52,28.01-8.43,1.32-2.54,2.64-5.07,3.96-7.61,19.43-7.17,36.15-11.68,48.53-14.58,22.51-5.26,48-11.03,80.75-9.4,15.77.78,28.69,3.06,37.41,4.95,22.24,5.3,29.14,9.88,33.61,14.13,36.91,13.74,68.01,35.25,47.24,40.37Z"/>
+                </svg>
+
+
+            </div>
         </section>
         <hr>
         <br><br><br><br>
@@ -215,41 +190,6 @@
                     1 second= 2 days on earth</p>
             </section>
             <div class="grid-area">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
-                <img src="./website-images/home-page-icons/astronaut.svg">
                 <img src="./website-images/home-page-icons/astronaut.svg">
             </div>
             </div>
